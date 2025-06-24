@@ -57,7 +57,6 @@
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: draw-scribble 4.5s ease-out forwards;
-            animation-delay: 2.2s;
         }
 
         @keyframes draw-scribble {
@@ -65,7 +64,7 @@
         }
 
         .pencil-anim {
-            offset-path: path('M10 25 C 80 10, 100 40, 150 25 S 220 10, 300 25');
+            offset-path: path('M 10 25 C 80 10, 100 40, 150 25 S 220 10, 300 25');
             animation: move-pencil 2.5s ease-out forwards;
             animation-delay: 2.2s;
             opacity: 0;
@@ -76,6 +75,29 @@
             98% { offset-distance: 200%; opacity: 1; }
             100% { offset-distance: 200%; opacity: 1; }
         }
+
+        @keyframes write-text {
+            0% { background-position: 100% 0;}
+            100% { background-position: 0 0;}
+        }
+
+        .text-write-effect {
+            background: linear-gradient(to right, #000 50%, transparent 50%) repeat-x;
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: write-text 2.2s steps(30) forwards;
+        }
+        
+        /* Animasi untuk lingkaran */
+        @keyframes pop-circle {
+            0% { transform: scale(0); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-pop-circle { animation: pop-circle 0.5s ease-out forwards; }
+
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8 overflow-hidden">
@@ -83,12 +105,39 @@
     <div class="relative w-full max-w-7xl">
         <!-- Kontainer untuk menumpuk bingkai dan konten -->
         <div class="relative">
+
             <!-- 1. Bingkai Pink (dari file SVG Anda) -->
             <img src="{{ asset('images/bingkai-pink-anda.svg') }}" 
                 class="animate-pop-in transform rotate-5" 
                 style="width: 100%; height: 100%; animation-delay: 0.2s; animation-fill-mode: both;" 
                 alt="Bingkai">
 
+            <!-- Hiasan Coretan Kiri Atas -->
+            <div class="absolute top-20 left-20 -translate-x-1/3 -translate-y-1/3 text-blue-300 opacity-100">
+                <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 59 198 C 20 120 91 115 75 151 C 33 187 56 61 106 83 C 114 92 98 114 87 109 C 68 94 97 68 125 64" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" class="scribble-path" style="animation-delay: 3s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));"/>
+                </svg>
+            </div>
+            <!-- Hiasan Coretan Kanan Bawah -->
+            <div class="absolute bottom-20 right-20 translate-x-1/3 translate-y-1/3 text-blue-300 opacity-100">
+                <svg width="300" height="300" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 31 189 C 100 189 86 91 49 128 C 35 167 155 142 106 83 C 94 73 65 89 84 107 C 104 118 124 108 147 69" stroke="currentcolor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" class="scribble-path" style="animation-delay: 3.5s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));"/>
+                </svg>
+            </div>
+            
+            <!-- Hiasan Lingkaran Kuning Kanan Atas -->
+            <div class="absolute top-14 -right-4 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 3.8s; animation-fill-mode: both;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="50" fill="currentColor" />
+                </svg>
+            </div>
+
+            <!-- Hiasan Lingkaran Kuning Kiri Bawah -->
+            <div class="absolute bottom-14 left-4 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 4.0s; animation-fill-mode: both;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="50" fill="currentColor" />
+                </svg>
+            </div>
 
             <!-- 2. Kontainer Konten Putih (diposisikan di atas bingkai) -->
             <div class="absolute inset-0  flex items-center justify-center transform rotate-5">
@@ -113,7 +162,7 @@
                     <!-- 5. Coretan dan pensil (ANIMASI FADE-IN DIHAPUS DARI SINI) -->
                     <div class="relative mt-[-4.5rem] h-36">
                         <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 300 40" style="overflow: visible;">
-                            <path class="scribble-path" style="filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
+                            <path class="scribble-path" style="animation-delay: 2.2s; filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
                             <g class="pencil-anim">
                                 <image href="{{ asset('images/pencil.svg') }}" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
                             </g>
