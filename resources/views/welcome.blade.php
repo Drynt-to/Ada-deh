@@ -23,150 +23,108 @@
         }
 
         body {
-            background-color: #686FC6; 
+            background-color: #686FC6;
         }
 
         /* Menggunakan font kustom */
         .font-poppins { font-family: 'Poppins', sans-serif; }
-        .font-neulis { font-family: 'Neulis Cursive', cursive; } 
+        .font-neulis { font-family: 'Neulis Cursive', cursive; }
+        .font-portfolio-size { font-size: clamp(6rem, 15vw, 10rem); }
 
-        .font-portfolio-size {
-             font-size: clamp(6rem, 15vw, 10rem);
-        }
-        
-        /* Bingkai Pink */
         .stamp-frame {
             background-color: #FB83A9;
             position: relative;
             padding: 7rem;
             transform: rotate(5deg);
         }
-        
-        /* Animasi masuk untuk elemen utama */
+
         @keyframes pop-in {
-            0% {
-                transform: rotate(5deg) scale(0.5);
-                opacity: 0;
-            }
-            80% {
-                transform: rotate(5deg) scale(1.05);
-                opacity: 1;
-            }
-            100% {
-                transform: rotate(5deg) scale(1);
-                opacity: 1;
-            }
+            0% { transform: rotate(5deg) scale(0.5); opacity: 0; }
+            80% { transform: rotate(5deg) scale(1.05); opacity: 1; }
+            100% { transform: rotate(5deg) scale(1); opacity: 1; }
         }
+        .animate-pop-in { animation: pop-in 0.7s ease-out forwards; }
 
-        .animate-pop-in {
-            animation: pop-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slide-in-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slide-in-right { from { opacity: 0; transform: translateX(50%); } to { opacity: 1; transform: translateX(0); } }
 
-        /* Properti untuk animasi coretan SVG */
+        .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+        .animate-slide-in-up { animation: slide-in-up 0.6s ease-out forwards; }
+        .animate-slide-in-right { animation: slide-in-right 0.7s ease-out forwards; }
+
         .scribble-path {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: draw-scribble 4.5s ease-out forwards;
-            animation-delay: 0.8s;
+            animation-delay: 2.2s;
         }
 
-        /* Keyframes untuk animasi 'menggambar' coretan */
         @keyframes draw-scribble {
-            to {
-                stroke-dashoffset: 0;
-            }
+            to { stroke-dashoffset: 0; }
         }
 
-        /* Properti untuk animasi pensil */
         .pencil-anim {
-            /* Perintahkan pensil untuk mengikuti path yang sama dengan garis */
             offset-path: path('M10 25 C 80 10, 100 40, 150 25 S 220 10, 300 25');
             animation: move-pencil 2.5s ease-out forwards;
-            animation-delay: 0.8s;
-            opacity: 0; /* Sembunyikan pensil di awal */
+            animation-delay: 2.2s;
+            opacity: 0;
         }
 
-        /* Keyframes untuk animasi pensil bergerak */
         @keyframes move-pencil {
-            0% {
-                offset-distance: 0%;
-                opacity: 1; /* Munculkan pensil saat animasi mulai */
-            }
-            98% {
-                offset-distance: 200%;
-                opacity: 1;
-            }
-            100% {
-                offset-distance: 200%;
-                opacity: 100; 
-            }
+            0% { offset-distance: 0%; opacity: 1; }
+            98% { offset-distance: 200%; opacity: 1; }
+            100% { offset-distance: 200%; opacity: 1; }
         }
-
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8 overflow-hidden">
 
-    <!-- Kontainer utama diperbesar untuk desktop -->
-    <div class="relative w-full max-w-6xl">
-        
-        <!-- Bingkai berbentuk Persegi Panjang Membulat -->
-        <div class="stamp-frame animate-pop-in" style="animation-delay: 0.2s;">
-            <!-- Konten di dalam, yang sedikit miring (padding diperbesar) -->
-            <div class="bg-rose-50 p-12 sm:p-16 shadow-xl">
-                
-                <!-- Teks "creative" (shadow diperhalus) -->
-                <div class="text-left">
-                    <h2 class="font-neulis text-5xl sm:text-6xl font-black"
-                        style="color: #138B6B; 
-                               text-shadow:
-                                   -4px -4px 0 #FFF, 4px -4px 0 #FFF,
-                                   -4px 4px 0 #FFF, 4px 4px 0 #FFF,
-                                   -2px 0 0 #FFF, 2px 0 0 #FFF,
-                                   0 -2px 0 #FFF, 0 2px 0 #FFF,
-                                   0 4px 8px rgba(0,0,0,0.35);">
-                        creative
-                    </h2>
-                </div>
-                <!-- Teks "Portfolio" (tengah, jarak dikurangi, shadow diperhalus) -->
-                <div class="text-center -mt-2">
-                    <h1 class="font-neulis font-portfolio-size font-black leading-none"
-                        style="color: #FA643B;
-                               text-shadow:
-                                   -4px -4px 0 #FFF, 4px -4px 0 #FFF,
-                                   -4px 4px 0 #FFF, 4px 4px 0 #FFF,
-                                   -3px 0 0 #FFF, 3px 0 0 #FFF,
-                                   0 -3px 0 #FFF, 0 3px 0 #FFF,
-                                   0 6px 10px rgba(0,0,0,0.4);">
-                        Portfolio
-                    </h1>
-                </div>
+    <div class="relative w-full max-w-7xl">
+        <!-- Kontainer untuk menumpuk bingkai dan konten -->
+        <div class="relative">
+            <!-- 1. Bingkai Pink (dari file SVG Anda) -->
+            <img src="{{ asset('images/bingkai-pink-anda.svg') }}" 
+                class="animate-pop-in transform rotate-5" 
+                style="width: 100%; height: 100%; animation-delay: 0.2s; animation-fill-mode: both;" 
+                alt="Bingkai">
 
-                <!-- Coretan, pensil, dan nama (dikembalikan ke satu container) -->
-                <div class="relative mt-[-4.5rem] h-36">
-                     <!-- Coretan garis dan pensil dalam satu SVG -->
-                    <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 300 40" overflow="visible">
-                        <!-- Path garis yang terlihat -->
-                        <path 
-                            class="scribble-path" 
-                            style="filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" 
-                            d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" 
-                            stroke="#FFD23F" 
-                            stroke-width="7" 
-                            fill="none" 
-                            stroke-linecap="round"/>
-                        
-                        <!-- PENSIL: Sekarang menggunakan file SVG eksternal Anda -->
-                        <g class="pencil-anim">
-                           <image 
-                                href="{{ asset('images/pencil.svg') }}" 
-                                x="-15" y="-60" width="60" height="60" 
-                                style="transform: rotate(335deg); 
-                                       filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
-                        </g>
-                    </svg>
-                     <!-- Nama (posisinya diturunkan lebih jauh lagi) -->
-                    <div class="absolute bottom-[-1.5rem] w-full text-right pr-4 sm:pr-8 transform -rotate-6">
-                        <p class="font-poppins text-2xl font-extrabold italic" style="color: #3267B5; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;">Virly vc.</p>
+
+            <!-- 2. Kontainer Konten Putih (diposisikan di atas bingkai) -->
+            <div class="absolute inset-0  flex items-center justify-center transform rotate-5">
+                <!-- Ukuran area putih diperkecil agar bingkai pink terlihat lebih tebal -->
+                <div class="bg-rose-50 animate-pop-in w-[calc(100%-23rem)] h-[calc(100%-27rem)] p-12 sm:p-16" 
+                     style="animation-delay: 0.7s; animation-fill-mode: both;">
+                    
+                    <!-- 3. Teks "creative" -->
+                    <div class="text-left animate-slide-in-up" style="animation-delay: 1.2s; animation-fill-mode: both;">
+                        <h2 class="font-neulis text-5xl sm:text-6xl font-black" style="color: #138B6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">
+                            creative
+                        </h2>
+                    </div>
+
+                    <!-- 4. Teks "Portfolio" -->
+                    <div class="text-center -mt-2 animate-slide-in-up" style="animation-delay: 1.6s; animation-fill-mode: both;">
+                        <h1 class="font-neulis font-portfolio-size font-black leading-none" style="color: #FA643B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -3px 0 0 #FFF, 3px 0 0 #FFF, 0 -3px 0 #FFF, 0 3px 0 #FFF, 0 6px 10px rgba(0,0,0,0.4);">
+                            Portfolio
+                        </h1>
+                    </div>
+
+                    <!-- 5. Coretan dan pensil (ANIMASI FADE-IN DIHAPUS DARI SINI) -->
+                    <div class="relative mt-[-4.5rem] h-36">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 300 40" style="overflow: visible;">
+                            <path class="scribble-path" style="filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
+                            <g class="pencil-anim">
+                                <image href="{{ asset('images/pencil.svg') }}" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
+                            </g>
+                        </svg>
+
+                        <!-- 6. Nama Virly -->
+                        <div class="absolute bottom-[1rem] w-full text-right pr-4 sm:pr-8 transform rotate-10 animate-slide-in-right" style="animation-delay: 2.8s; animation-fill-mode: both;">
+                            <p class="font-poppins text-2xl font-extrabold italic" style="color: #3267B5; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;">
+                                Virly vc.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
