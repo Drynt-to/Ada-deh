@@ -9,12 +9,12 @@
     <style>
         /*
         LANGKAH 1: MEMUAT FONT KUSTOM ANDA
-        - Pastikan Anda sudah meletakkan file font (misal: NeulisCursive.woff2)
+        - Pastikan Anda sudah meletakkan file font (misal: DrinksFruit.woff2)
           di dalam folder `public/fonts/` pada proyek Laravel Anda.
         - Ganti 'GANT_DENGAN_NAMA_FILENYA.woff2' di bawah ini dengan nama file font Anda.
         */
         @font-face {
-            font-family: 'Neulis Cursive';
+            font-family: 'Drinks Fruit'; /* Nama font diubah */
             /* Menggunakan helper asset() dari Laravel untuk path yang benar */
             src: url("{{ asset('fonts/GANT_DENGAN_NAMA_FILENYA.woff2') }}") format('woff2'),
                  url("{{ asset('fonts/GANT_DENGAN_NAMA_FILENYA.ttf') }}") format('truetype');
@@ -28,7 +28,7 @@
 
         /* Menggunakan font kustom */
         .font-poppins { font-family: 'Poppins', sans-serif; }
-        .font-neulis { font-family: 'Neulis Cursive', cursive; }
+        .font-drinks-fruit { font-family: 'Drinks Fruit', cursive; } /* Kelas font diubah */
         .font-portfolio-size { font-size: clamp(6rem, 15vw, 10rem); }
 
         @keyframes pop-in {
@@ -50,7 +50,6 @@
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: draw-scribble 4.5s ease-out forwards;
-            animation-delay: 2.2s;
         }
 
         @keyframes draw-scribble {
@@ -116,7 +115,7 @@
                 <div class="relative">
 
                     <!-- 1. Bingkai Pink (dari file SVG Anda) -->
-                    <img src="{{ asset('images/bingkai-pink-anda.svg') }}" 
+                    <img src="images/bingkai-pink-anda.svg" 
                         class="animate-pop-in transform rotate-5" 
                         style="width: 100%; height: 100%; animation-delay: 0.2s; animation-fill-mode: both;" 
                         alt="Bingkai">
@@ -156,14 +155,14 @@
                             
                             <!-- 3. Teks "creative" -->
                             <div class="text-left animate-slide-in-up" style="animation-delay: 1.2s; animation-fill-mode: both;">
-                                <h2 class="font-neulis text-5xl sm:text-6xl font-black" style="color: #138B6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">
+                                <h2 class="font-drinks-fruit text-5xl sm:text-6xl" style="color: #138B6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">
                                     creative
                                 </h2>
                             </div>
 
                             <!-- 4. Teks "Portfolio" -->
                             <div class="text-center -mt-2 animate-slide-in-up" style="animation-delay: 1.6s; animation-fill-mode: both;">
-                                <h1 class="font-neulis font-portfolio-size font-black leading-none" style="color: #FA643B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -3px 0 0 #FFF, 3px 0 0 #FFF, 0 -3px 0 #FFF, 0 3px 0 #FFF, 0 6px 10px rgba(0,0,0,0.4);">
+                                <h1 class="font-drinks-fruit font-portfolio-size leading-none" style="color: #FA643B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -3px 0 0 #FFF, 3px 0 0 #FFF, 0 -3px 0 #FFF, 0 3px 0 #FFF, 0 6px 10px rgba(0,0,0,0.4);">
                                     Portfolio
                                 </h1>
                             </div>
@@ -173,7 +172,7 @@
                                 <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 300 40" style="overflow: visible;">
                                     <path class="scribble-path wobbly-scribble" style="animation-delay: 2.2s; filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
                                     <g class="pencil-anim">
-                                        <image href="{{ asset('images/pencil.svg') }}" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
+                                        <image href="images/pencil.svg" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
                                     </g>
                                 </svg>
 
@@ -192,7 +191,8 @@
 
         <!-- Section 2: Area Konten Baru -->
         <section class="min-h-screen bg-[#686FC6] p-8">
-            <h2 class="text-4xl text-white text-center font-bold">Masih Kosong Ye Sabar</h2>
+            <h2 class="text-4xl text-white text-center font-bold">Masih Kosong Ye Sabar, saya sudah lelah sama yang diatas
+            </h2>
             <!-- Anda bisa mulai menambahkan konten baru di dalam section ini -->
         </section>
 
