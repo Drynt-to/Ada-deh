@@ -236,7 +236,7 @@
                 </h1>
                 <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
                     <p class="font-medium uppercase">BY VIRLY VC</p>
-                    <p class="font-normal">2025</p>
+                    <p class="font-normal">2024</p>
                 </div>
             </div>
         </section>
