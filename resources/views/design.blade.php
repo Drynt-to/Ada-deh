@@ -6,13 +6,10 @@
     <title>Portfolio Virly</title>
     <!-- Memuat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@1,200&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
-        /*
-        LANGKAH 1: MEMUAT FONT KUSTOM ANDA
-        - Pastikan Anda sudah meletakkan file font (misal: DrinksFruit.woff2)
-          di dalam folder `public/fonts/` pada proyek Laravel Anda.
-        - Ganti 'GANT_DENGAN_NAMA_FILENYA.woff2' di bawah ini dengan nama file font Anda.
-        */
         @font-face {
             font-family: 'Drinks Fruit'; /* Nama font diubah */
             /* Menggunakan helper asset() dari Laravel untuk path yang benar */
@@ -24,12 +21,16 @@
 
         body {
             background-color: #686FC6;
+            overflow: hidden; /* Mencegah scroll yang tidak perlu */
+            transition: background-color 0.5s ease-in-out;
         }
 
         /* Menggunakan font kustom */
         .font-poppins { font-family: 'Poppins', sans-serif; }
-        .font-drinks-fruit { font-family: 'Drinks Fruit', cursive; } /* Kelas font diubah */
-        .font-portfolio-size { font-size: clamp(6rem, 15vw, 10rem); }
+        .font-drinks-fruit { font-family: 'Drinks Fruit', cursive; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-plus-jakarta-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-portfolio-size { font-size: clamp(4rem, 15vw, 10rem); }
 
         @keyframes pop-in {
             0% { transform: rotate(5deg) scale(0.5); opacity: 0; }
@@ -40,6 +41,7 @@
 
         @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slide-in-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide-in-up { animation: slide-in-up 0.6s ease-out forwards; }
         @keyframes slide-in-right { from { opacity: 0; transform: translateX(50%); } to { opacity: 1; transform: translateX(0); } }
 
         .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
@@ -80,10 +82,30 @@
             filter: url(#wobble-filter);
         }
 
+        @keyframes camera-slide-in {
+            from { transform: translateY(100vh) scale(0.3) rotate(-15deg); opacity: 0; }
+            to { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+        }
+        .animate-camera-slide { animation: camera-slide-in 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+
+        @keyframes shutter-click {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+        }
+        .animate-shutter-click { animation: shutter-click 0.2s ease-in-out; }
+
+        @keyframes screen-flash {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .animate-flash { animation: screen-flash 0.7s ease-out forwards; }
+        
+
     </style>
 </head>
 <body class="overflow-x-hidden">
-    
+
     <!-- Filter SVG untuk Efek Goyangan (Wobble) -->
     <svg width="0" height="0" style="position:absolute;">
         <filter id="wobble-filter">
@@ -110,6 +132,11 @@
     <main>
         <!-- Section 1: Hero (Halaman Depan yang sudah kita buat) -->
         <section class="min-h-screen flex items-center justify-center p-4 sm:p-8 overflow-hidden">
+            <!-- Tombol Kamera -->
+            <button id="camera-trigger" class="fixed top-4 left-4 z-50 text-white hover:text-black transition-colors duration-300">
+                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            </button>
+
             <div class="relative w-full max-w-7xl">
                 <!-- Kontainer untuk menumpuk bingkai dan konten -->
                 <div class="relative">
@@ -189,14 +216,101 @@
             </div>
         </section>
 
-        <!-- Section 2: Area Konten Baru -->
-        <section class="min-h-screen bg-[#686FC6] p-8">
-            <h2 class="text-4xl text-white text-center font-bold">Masih Kosong Ye Sabar, saya sudah lelah sama yang diatas
-            </h2>
-            <!-- Anda bisa mulai menambahkan konten baru di dalam section ini -->
+         <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
+            <!-- Plastic Texture -->
+            <img src="images/plastic-texture.png" alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-10">
+
+            <!-- Grain Texture -->
+            <img src="images/grain-texture.png" alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-20">
+
+            <!-- Tombol Kembali ke Halaman Desain -->
+            <button id="back-trigger" class="fixed top-4 left-4 z-30 text-white hover:text-black transition-colors duration-300">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+            </button>
+
+            <div class="text-white">
+                <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
+                    <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
+                </h1>
+                <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
+                    <p class="font-medium uppercase">BY VIRLY VC</p>
+                    <p class="font-normal">2025</p>
+                </div>
+            </div>
         </section>
 
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cameraTrigger = document.getElementById('camera-trigger');
+            const backTrigger = document.getElementById('back-trigger');
+            const cameraContainer = document.getElementById('animated-camera-container');
+            const flashOverlay = document.getElementById('flash-overlay');
+            const designPage = document.querySelector('section'); // asumsikan section pertama
+            const photoPage = document.getElementById('photo-page');
+            const body = document.body;
+
+            let isTransitioning = false;
+
+            const performTransition = (fromPage, toPage, newBgColor) => {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                cameraContainer.classList.remove('hidden');
+                cameraContainer.classList.add('animate-camera-slide');
+
+                setTimeout(() => {
+                    cameraContainer.classList.add('animate-shutter-click');
+
+                    // Langsung ganti halaman di balik flash
+                    fromPage.classList.add('hidden');
+                    fromPage.classList.remove('flex');
+                    toPage.classList.remove('hidden');
+                    toPage.classList.add('flex');
+                    body.style.backgroundColor = newBgColor;
+
+                    // Munculkan flash
+                    flashOverlay.classList.remove('hidden');
+                    flashOverlay.style.opacity = '1';
+                    flashOverlay.classList.add('animate-flash');
+
+                    // Sembunyikan kamera
+                    cameraContainer.classList.add('hidden');
+                    cameraContainer.classList.remove('animate-camera-slide', 'animate-shutter-click');
+
+                    // Setelah flash selesai, hilangkan overlay
+                    flashOverlay.addEventListener('animationend', () => {
+                        flashOverlay.classList.add('hidden');
+                        flashOverlay.classList.remove('animate-flash');
+                        flashOverlay.style.opacity = '0';
+
+                        isTransitioning = false;
+                    }, { once: true });
+
+                }, 800);
+            };
+
+            cameraTrigger.addEventListener('click', () => {
+                performTransition(designPage, photoPage, '#000000');
+            });
+
+            backTrigger.addEventListener('click', () => {
+                performTransition(photoPage, designPage, '#686FC6');
+            });
+        });
+    </script>
+    <!-- Kamera dan flash untuk transisi -->
+    <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">
+        <!-- Kamera besar untuk animasi (SVG diganti dengan file Anda) -->
+        <img src="{{ asset('images/camera.svg') }}" class="w-48 h-48 drop-shadow-lg" alt="Animasi Kamera">
+    </div>
+    <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
+    
+    <!-- Flash putih layar -->
+    <div id="flash-overlay" class="hidden fixed inset-0 bg-white z-40 opacity-0 pointer-events-none"></div>
+
 
 </body>
 </html>
