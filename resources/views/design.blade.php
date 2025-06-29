@@ -104,11 +104,10 @@
         <!-- Portfolio Photography Virly -->
         <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
             <img src="images/plastic-texture.png" alt=""
-                 class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-10">
+                 class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
             <video autoplay loop muted playsinline
-                class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none z-20">
-                <source src="{{ asset('videos/GR5.mov') }}" type="video/mov">
-                <!-- Browser Anda tidak mendukung tag video. -->
+                class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
             </video>
             <!-- <img src="images/grain-texture.png" alt=""
                  class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-20"> -->
@@ -119,7 +118,7 @@
                 </svg>
             </button>
 
-            <div class="text-white">
+            <div class="text-white z-30">
                 <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
                     <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
                 </h1>
@@ -138,53 +137,136 @@
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
     
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cameraTrigger = document.getElementById('camera-trigger');
-            const backTrigger = document.getElementById('back-trigger');
-            const cameraContainer = document.getElementById('animated-camera-container');
-            const flashOverlay = document.getElementById('flash-overlay');
-            const designPage = document.querySelector('section');
-            const photoPage = document.getElementById('photo-page');
-            const body = document.body;
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Elemen Halaman & Musik ---
+        const cameraTrigger = document.getElementById('camera-trigger');
+        const backTrigger = document.getElementById('back-trigger');
+        const cameraContainer = document.getElementById('animated-camera-container');
+        const flashOverlay = document.getElementById('flash-overlay');
+        const designPage = document.querySelector('section');
+        const photoPage = document.getElementById('photo-page');
+        const body = document.body;
+        const musicDesign = document.getElementById('music-design');
+        const musicPhoto = document.getElementById('music-photo');
+        const musicToggleButton = document.getElementById('music-toggle-btn');
+        
+        let isTransitioning = false;
+        let isMuted = true;
+        let currentMusic = musicDesign;
+        const targetVolume = 0.5; // Volume maksimal yang kita inginkan (30%)
 
-            let isTransitioning = false;
+        // Inisialisasi volume
+        musicDesign.volume = 0;
+        musicPhoto.volume = 0;
 
-            const performTransition = (fromPage, toPage, newBgColor) => {
-                if (isTransitioning) return;
-                isTransitioning = true;
+        const speakerOnIcon = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" /></svg>`;
+        const speakerOffIcon = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" /></svg>`;
+        
+        musicToggleButton.innerHTML = speakerOffIcon;
 
-                cameraContainer.classList.remove('hidden');
-                cameraContainer.classList.add('animate-camera-slide');
+        // --- FUNGSI FADE AUDIO BARU ---
+        const fadeOut = (audio) => {
+            let currentVolume = audio.volume;
+            if (currentVolume === 0) { // Jika sudah hening, langsung pause
+                audio.pause();
+                return;
+            }
+            const fadeInterval = setInterval(() => {
+                currentVolume -= 0.02;
+                if (currentVolume <= 0) {
+                    audio.volume = 0;
+                    audio.pause();
+                    clearInterval(fadeInterval);
+                } else {
+                    audio.volume = currentVolume;
+                }
+            }, 50);
+        };
 
-                setTimeout(() => {
-                    cameraContainer.classList.add('animate-shutter-click');
-                    fromPage.classList.add('hidden');
-                    fromPage.classList.remove('flex');
-                    toPage.classList.remove('hidden');
-                    toPage.classList.add('flex');
-                    body.style.backgroundColor = newBgColor;
-                    flashOverlay.classList.remove('hidden');
-                    flashOverlay.style.opacity = '1';
-                    flashOverlay.classList.add('animate-flash');
-                    cameraContainer.classList.add('hidden');
-                    cameraContainer.classList.remove('animate-camera-slide', 'animate-shutter-click');
-                    flashOverlay.addEventListener('animationend', () => {
-                        flashOverlay.classList.add('hidden');
-                        flashOverlay.classList.remove('animate-flash');
-                        flashOverlay.style.opacity = '0';
-                        isTransitioning = false;
-                    }, { once: true });
-                }, 800);
-            };
+        const fadeIn = (audio) => {
+            audio.play().then(() => { // Pastikan play berhasil sebelum fade in
+                audio.volume = 0;
+                let currentVolume = 0;
+                const fadeInterval = setInterval(() => {
+                    currentVolume += 0.01;
+                    if (currentVolume >= targetVolume) {
+                        audio.volume = targetVolume;
+                        clearInterval(fadeInterval);
+                    } else {
+                        audio.volume = currentVolume;
+                    }
+                }, 50);
+            }).catch(error => console.error("Autoplay was prevented:", error));
+        };
 
-            cameraTrigger.addEventListener('click', () => {
-                performTransition(designPage, photoPage, '#000000');
-            });
+        // --- FUNGSI TRANSISI UTAMA ---
+        const performTransition = (fromPage, toPage, newBgColor) => {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            const oldMusic = currentMusic;
+            
+            if (toPage === photoPage) {
+                currentMusic = musicPhoto;
+            } else {
+                currentMusic = musicDesign;
+            }
 
-            backTrigger.addEventListener('click', () => {
-                 performTransition(photoPage, designPage, '#686FC6');
-            });
+            if (!isMuted) {
+                fadeOut(oldMusic);
+                fadeIn(currentMusic);
+            }
+
+            // Animasi visual... (tidak berubah)
+            cameraContainer.classList.remove('hidden');
+            cameraContainer.classList.add('animate-camera-slide');
+            setTimeout(() => {
+                cameraContainer.classList.add('animate-shutter-click');
+                fromPage.classList.add('hidden');
+                fromPage.classList.remove('flex');
+                toPage.classList.remove('hidden');
+                toPage.classList.add('flex');
+                body.style.backgroundColor = newBgColor;
+                flashOverlay.classList.remove('hidden');
+                flashOverlay.style.opacity = '1';
+                flashOverlay.classList.add('animate-flash');
+                cameraContainer.classList.add('hidden');
+                cameraContainer.classList.remove('animate-camera-slide', 'animate-shutter-click');
+                flashOverlay.addEventListener('animationend', () => {
+                    flashOverlay.classList.add('hidden');
+                    flashOverlay.classList.remove('animate-flash');
+                    flashOverlay.style.opacity = '0';
+                    isTransitioning = false;
+                }, { once: true });
+            }, 800);
+        };
+
+        // --- EVENT LISTENERS ---
+        cameraTrigger.addEventListener('click', () => performTransition(designPage, photoPage, '#000000'));
+        backTrigger.addEventListener('click', () => performTransition(photoPage, designPage, '#686FC6'));
+
+        musicToggleButton.addEventListener('click', () => {
+            isMuted = !isMuted;
+            if (isMuted) {
+                fadeOut(currentMusic);
+            } else {
+                fadeIn(currentMusic);
+            }
+            musicToggleButton.innerHTML = isMuted ? speakerOffIcon : speakerOnIcon;
         });
+    });
     </script>
+
+    {{-- KODE BARU: ELEMEN AUDIO DAN TOMBOL KONTROL MUSIK --}}
+    <audio id="music-design" loop>
+        <source src="{{ asset('music/design-music.mp3') }}" type="audio/mpeg">
+    </audio>
+    <audio id="music-photo" loop>
+        <source src="{{ asset('music/photo-music.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-50 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
+        {{-- Ikon akan diisi oleh JavaScript --}}
+    </button>
 </body>
 </html>
