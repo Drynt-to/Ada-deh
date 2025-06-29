@@ -135,9 +135,18 @@
         <img src="images/camera.svg" class="w-48 h-48 drop-shadow-lg" alt="Animasi Kamera">
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
-    
+
+    {{-- SVG BARU UNTUK TRANSISI KEMBALI --}}
+    <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
+        <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
+            {{-- Garis tebal yang akan dianimasikan untuk menutupi layar --}}
+            <path class="scribble-transition-path" stroke="black" stroke-width="200" d="M -50,50 L 150,50" />
+        </svg>
+    </div>
+
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+
         // --- Elemen Halaman & Musik ---
         const cameraTrigger = document.getElementById('camera-trigger');
         const backTrigger = document.getElementById('back-trigger');
@@ -227,7 +236,7 @@
             setTimeout(() => {
                 sfxShutter.currentTime = 0; // Ulangi suara dari awal
                 sfxShutter.play();
-                
+
                 cameraContainer.classList.add('animate-shutter-click');
                 fromPage.classList.add('hidden');
                 fromPage.classList.remove('flex');

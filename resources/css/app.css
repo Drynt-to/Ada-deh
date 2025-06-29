@@ -96,3 +96,20 @@ body {
     100% { opacity: 0; }
 }
 .animate-flash { animation: screen-flash 0.7s ease-out forwards; }
+
+.scribble-transition-path {
+  /* Atur panjang garis agar bisa dianimasikan */
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.animate-scribble-wipe {
+  /* Memicu animasi */
+  animation: draw-wipe 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes draw-wipe {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
