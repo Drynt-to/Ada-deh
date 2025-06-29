@@ -39,30 +39,34 @@
             <button id="camera-trigger" class="fixed top-4 left-4 z-50 text-white hover:text-black transition-colors duration-300">
                 <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
             </button>
-
+            <!-- Portfolio Design Virly -->
             <div class="relative w-full max-w-7xl">
                 <div class="relative">
                     <img src="images/bingkai-pink-anda.svg" 
                          class="animate-pop-in transform rotate-5" 
                          style="width: 100%; height: 100%; animation-delay: 0.2s; animation-fill-mode: both;" 
                          alt="Bingkai">
+                    <!-- Elemen atas kiri coretan itu -->
                     <div class="absolute top-40 left-40 -translate-x-1/4 -translate-y-1/3 text-blue-300 opacity-100 wobbly-scribble">
                         <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="scribble-path" style="animation-delay: 3s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 59 198 C 20 120 91 115 75 151 C 33 187 56 61 106 83 C 114 92 98 114 87 109 C 68 94 97 68 125 64" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div class="absolute bottom-20 right-20 translate-x-1/5 translate-y-1/8 text-blue-300 opacity-100 wobbly-scribble z-30">
+                    <!-- Elemen bawah kanan coretan itu -->
+                    <div class="absolute bottom-15 right-1 translate-x-1/5 translate-y-1/5 text-blue-300 opacity-100 wobbly-scribble z-30">
                         <svg width="300" height="300" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="scribble-path" style="animation-delay: 3.5s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 31 189 C 100 189 86 91 49 128 C 35 167 155 142 106 83 C 94 73 65 89 84 107 C 104 118 124 108 147 69" stroke="currentcolor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div class="absolute top-14 -right-4 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 3.8s; animation-fill-mode: both;">
-                        <svg width="100" height="100" viewBox="0 0 100 100">
+                    <!-- Elemen atas kanan bulet itu -->
+                    <div class="absolute top-22 -right-10 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 3.8s; animation-fill-mode: both;">
+                        <svg width="130" height="130" viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="50" fill="currentColor" />
                         </svg>
                     </div>
-                    <div class="absolute bottom-20 left-4 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 4.0s; animation-fill-mode: both;">
-                        <svg width="100" height="100" viewBox="0 0 100 100">
+                    <!-- Elemen bawah kiri bulet itu -->
+                    <div class="absolute bottom-25 -left-10 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 4.0s; animation-fill-mode: both;">
+                        <svg width="130" height="130" viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="50" fill="currentColor" />
                         </svg>
                     </div>
@@ -97,12 +101,17 @@
                 </div>
             </div>
         </section>
-
+        <!-- Portfolio Photography Virly -->
         <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
             <img src="images/plastic-texture.png" alt=""
                  class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-10">
-            <img src="images/grain-texture.png" alt=""
-                 class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-20">
+            <video autoplay loop muted playsinline
+                class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none z-20">
+                <source src="{{ asset('videos/GR5.mov') }}" type="video/mov">
+                <!-- Browser Anda tidak mendukung tag video. -->
+            </video>
+            <!-- <img src="images/grain-texture.png" alt=""
+                 class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-20"> -->
 
             <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
                 <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
