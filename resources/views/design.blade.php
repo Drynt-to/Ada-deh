@@ -109,8 +109,6 @@
                 class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
                 <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
             </video>
-            <!-- <img src="images/grain-texture.png" alt=""
-                 class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-20"> -->
 
             <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
                 <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
@@ -118,7 +116,7 @@
                 </svg>
             </button>
 
-            <div class="text-white z-30">
+            <div class="text-white z-10">
                 <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
                     <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
                 </h1>
@@ -158,5 +156,20 @@
     <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-50 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
         {{-- Ikon akan diisi oleh JavaScript --}}
     </button>
+    <div id="liquid-transition-overlay">
+        <div class="liquid-blob"></div>
+        <div class="liquid-blob"></div>
+        <div class="liquid-blob"></div>
+    </div>
+
+    <svg style="position:absolute; width:0; height:0;">
+        <defs>
+            <filter id="liquid-filter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
 </body>
 </html>

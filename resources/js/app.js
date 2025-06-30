@@ -13,30 +13,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const musicDesign = document.getElementById('music-design');
     const musicPhoto = document.getElementById('music-photo');
     const musicToggleButton = document.getElementById('music-toggle-btn');
-    
     const sfxShutter = document.getElementById('sfx-shutter');
+    
+    // Elemen BARU untuk transisi liquid
+    const liquidOverlay = document.getElementById('liquid-transition-overlay');
 
     let isTransitioning = false;
     let isMuted = true;
     let currentMusic = musicDesign;
-    const targetVolume = 0.5; // Volume maksimal yang kita inginkan (30%)
+    const targetVolume = 0.5;
 
     // Inisialisasi volume
     if (musicDesign) musicDesign.volume = 0;
     if (musicPhoto) musicPhoto.volume = 0;
     if (sfxShutter) sfxShutter.volume = 0.5;
 
-
     const speakerOnIcon = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" /></svg>`;
     const speakerOffIcon = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" /></svg>`;
-    
+
     if (musicToggleButton) musicToggleButton.innerHTML = speakerOffIcon;
 
-
-    // --- FUNGSI FADE AUDIO BARU ---
+    // --- FUNGSI FADE AUDIO ---
     const fadeOut = (audio) => {
         let currentVolume = audio.volume;
-        if (currentVolume === 0) { // Jika sudah hening, langsung pause
+        if (currentVolume === 0) {
             audio.pause();
             return;
         }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const fadeIn = (audio) => {
-        audio.play().then(() => { // Pastikan play berhasil sebelum fade in
+        audio.play().then(() => {
             audio.volume = 0;
             let currentVolume = 0;
             const fadeInterval = setInterval(() => {
@@ -68,37 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }).catch(error => console.error("Autoplay was prevented:", error));
     };
 
-    // --- FUNGSI TRANSISI UTAMA ---
-    const performTransition = (fromPage, toPage, newBgColor) => {
+    // --- FUNGSI TRANSISI KAMERA (Design -> Photo) ---
+    const performCameraTransition = () => {
         if (isTransitioning) return;
         isTransitioning = true;
         
-        const oldMusic = currentMusic;
-        
-        if (toPage === photoPage) {
-            currentMusic = musicPhoto;
-        } else {
-            currentMusic = musicDesign;
-        }
-
         if (!isMuted) {
-            fadeOut(oldMusic);
-            fadeIn(currentMusic);
+            fadeOut(musicDesign);
+            fadeIn(musicPhoto);
         }
+        currentMusic = musicPhoto;
 
-        // Animasi visual... (tidak berubah)
         cameraContainer.classList.remove('hidden');
         cameraContainer.classList.add('animate-camera-slide');
         setTimeout(() => {
-            sfxShutter.currentTime = 0; // Ulangi suara dari awal
+            sfxShutter.currentTime = 0;
             sfxShutter.play();
-
             cameraContainer.classList.add('animate-shutter-click');
-            fromPage.classList.add('hidden');
-            fromPage.classList.remove('flex');
-            toPage.classList.remove('hidden');
-            toPage.classList.add('flex');
-            body.style.backgroundColor = newBgColor;
+            designPage.classList.add('hidden');
+            designPage.classList.remove('flex');
+            photoPage.classList.remove('hidden');
+            photoPage.classList.add('flex');
+            body.style.backgroundColor = '#000000';
             flashOverlay.classList.remove('hidden');
             flashOverlay.style.opacity = '1';
             flashOverlay.classList.add('animate-flash');
@@ -113,12 +104,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800);
     };
 
+    // --- FUNGSI TRANSISI LIQUID BARU (Photo -> Design) ---
+    const performLiquidTransition = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        if (!isMuted) {
+            fadeOut(musicPhoto);
+            fadeIn(musicDesign);
+        }
+        currentMusic = musicDesign;
+
+        // 1. Tambahkan class ke body untuk menandakan transisi dimulai
+        body.classList.add('liquid-transition-active');
+
+        // Aktifkan overlay liquid
+        liquidOverlay.classList.add('is-active');
+
+        // Tunggu animasi liquid selesai, lalu ganti halaman
+        setTimeout(() => {
+            photoPage.classList.add('hidden');
+            photoPage.classList.remove('flex');
+            designPage.classList.remove('hidden');
+            designPage.classList.add('flex');
+            body.style.backgroundColor = '#686FC6';
+
+            // Sembunyikan kembali overlay
+            liquidOverlay.classList.remove('is-active');
+
+            // Tunggu sebentar sebelum menghapus class, agar tidak ada kedipan
+            setTimeout(() => {
+                // 2. Hapus class dari body setelah transisi selesai total
+                body.classList.remove('liquid-transition-active');
+                isTransitioning = false;
+            }, 100); // delay kecil untuk memastikan mulus
+
+        }, 1800); // Sesuaikan durasi (1600ms transisi + 200ms buffer)
+    };
+
     // --- EVENT LISTENERS ---
     if(cameraTrigger) {
-        cameraTrigger.addEventListener('click', () => performTransition(designPage, photoPage, '#000000'));
+        cameraTrigger.addEventListener('click', performCameraTransition);
     }
     if(backTrigger) {
-        backTrigger.addEventListener('click', () => performTransition(photoPage, designPage, '#686FC6'));
+        // Arahkan tombol back ke fungsi transisi liquid yang baru
+        backTrigger.addEventListener('click', performLiquidTransition);
     }
 
     if(musicToggleButton) {

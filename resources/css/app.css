@@ -113,3 +113,57 @@ body {
     stroke-dashoffset: 0;
   }
 }
+#photo-page {
+    position: relative; /* Ini penting agar z-index bisa diterapkan */
+    z-index: 1;         /* Menempatkan seluruh seksi ini di lapisan bawah */
+}
+|--------------------------------------------------------------------------
+| EFEK TRANSISI LIQUID
+|--------------------------------------------------------------------------
+*/
+#liquid-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden; /* Sembunyikan secara default */
+    z-index: 9999;
+    /* Terapkan filter SVG yang kita buat */
+    filter: url('#liquid-filter');
+}
+
+.liquid-blob {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    /* Transisi yang lebih halus dan lambat */
+    transition: transform 1.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+/* Posisi, ukuran, dan WARNA blob yang berbeda-beda */
+/* Warna-warna ini dipilih agar serasi dengan background ungu Anda (#686FC6) */
+.liquid-blob:nth-child(1) {
+    width: 150px; height: 150px; top: 20%; left: 20%;
+    background-color: #8e44ad; /* Ungu */
+}
+.liquid-blob:nth-child(2) {
+    width: 250px; height: 250px; top: 50%; left: 75%; transition-delay: 0.15s;
+    background-color: #2980b9; /* Biru Tua */
+}
+.liquid-blob:nth-child(3) {
+    width: 200px; height: 200px; top: 65%; left: 15%; transition-delay: 0.25s;
+    background-color: #3498DB; /* Biru Muda */
+}
+
+/* Saat aktif, perbesar blob hingga menutupi layar */
+#liquid-transition-overlay.is-active {
+    visibility: visible;
+}
+
+#liquid-transition-overlay.is-active .liquid-blob {
+    transform: scale(25);
+}
+.liquid-transition-active #photo-page {
+    z-index: -1 !important;
+}
