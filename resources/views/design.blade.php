@@ -116,11 +116,11 @@
             <section id = "wave-transition-overlay" class="relative block w-full" style="height: 300px; overflow: hidden;">
                 <svg viewBox="0 0 1440 320" class="block w-full h-full" preserveAspectRatio="none">
                     <path fill="url(#gradientWave)" fill-opacity="1" 
-                        d="M 0 64 L 48 90.7 C 96 117 192 171 288 165.3 C 384 160 480 96 576 90.7 C 672 85 768 139 864 144 C 960 149 1056 107 1152 112 C 1248 117 1344 171 1385 140 L 1461 105 L 1440 320 L 1392 320 C 1344 320 1248 320 1152 320 C 1056 320 960 320 864 320 C 768 320 672 320 576 320 C 480 320 384 320 288 320 C 192 320 96 320 48 320 L 0 320 Z">
+                        d="M 0 64 L 48 90.7 C 96 117 192 171 288 165.3 C 384 160 480 96 576 90.7 C 672 85 768 139 864 144 C 960 149 1056 107 1152 112 C 1248 117 1340 185 1389 149 L 1461 105 L 1440 320 L 1392 320 C 1344 320 1248 320 1152 320 C 1056 320 960 320 864 320 C 768 320 672 320 576 320 C 480 320 384 320 288 320 C 192 320 96 320 48 320 L 0 320 Z">
                     </path>
                     <defs>
                         <linearGradient id="gradientWave" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0%" stop-color="#686FC6" />
+                            <stop offset="5%" stop-color="#686FC6" />
                             <stop offset="100%" stop-color="#FF8BB0" />
                         </linearGradient>
                     </defs>
