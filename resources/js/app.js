@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }).catch(error => console.error("Autoplay was prevented:", error));
     };
 
+    const aboutSection = document.getElementById('about-me-design');
+    const waveTransition = document.getElementById('wave-transition-overlay');
+
     // --- FUNGSI TRANSISI KAMERA ---
     const performCameraTransition = () => {
         if (isTransitioning) return;
@@ -77,13 +80,27 @@ document.addEventListener('DOMContentLoaded', () => {
         cameraContainer.classList.remove('hidden');
         cameraContainer.classList.add('animate-camera-slide');
         setTimeout(() => {
-            sfxShutter.currentTime = 0; sfxShutter.play();
+            sfxShutter.currentTime = 0; 
+            sfxShutter.play();
             cameraContainer.classList.add('animate-shutter-click');
-            designPage.classList.add('hidden'); designPage.classList.remove('flex');
-            photoPage.classList.remove('hidden'); photoPage.classList.add('flex');
+
+            designPage.classList.add('hidden');
+            designPage.classList.remove('flex');
+            if (aboutSection) aboutSection.classList.add('hidden');
+
+            if (waveTransition) waveTransition.classList.add('hidden');
+
+
+            designPage.classList.add('hidden'); 
+            designPage.classList.remove('flex');
+            photoPage.classList.remove('hidden'); 
+            photoPage.classList.add('flex');
             body.style.backgroundColor = '#000000';
-            flashOverlay.classList.remove('hidden'); flashOverlay.style.opacity = '1';
+
+            flashOverlay.classList.remove('hidden'); 
+            flashOverlay.style.opacity = '1';
             flashOverlay.classList.add('animate-flash');
+
             cameraContainer.classList.add('hidden');
             cameraContainer.classList.remove('animate-camera-slide', 'animate-shutter-click');
 
@@ -111,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeOut(musicPhoto); 
             fadeIn(musicDesign); 
         }
+
         currentMusic = musicDesign;
         body.classList.add('liquid-transition-active');
         liquidOverlay.classList.add('is-active');
@@ -120,7 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
             photoPage.classList.remove('flex');
             designPage.classList.remove('hidden'); 
             designPage.classList.add('flex');
+            if (aboutSection) aboutSection.classList.remove('hidden');
             body.style.backgroundColor = '#686FC6';
+            if (waveTransition) waveTransition.classList.remove('hidden');
             liquidOverlay.classList.remove('is-active');
             setTimeout(() => {
                 body.classList.remove('liquid-transition-active');
@@ -143,4 +163,14 @@ document.addEventListener('DOMContentLoaded', () => {
             musicToggleButton.innerHTML = isMuted ? speakerOffIcon : speakerOnIcon;
         });
     }
+    const scrollArrow = document.getElementById('scroll-arrow');
+
+    window.addEventListener('scroll', () => {
+        // Jika user scroll lebih dari 50px, sembunyikan panah
+        if (window.scrollY > 50) {
+            scrollArrow.style.display = 'none';
+        } else {
+            scrollArrow.style.display = 'block';
+        }
+    });
 });
