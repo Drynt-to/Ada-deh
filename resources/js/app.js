@@ -1,5 +1,3 @@
-import gsap from "gsap";
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Elemen & Variabel ---
@@ -31,6 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sfxShutter) sfxShutter.volume = 0.5;
     if (sfxLiquid) sfxLiquid.volume = 0.3;
 
+    const initializeToDesignPage = () => {
+    // Set kondisi sama seperti setelah liquid transition
+        photoPage.classList.add('hidden');
+        photoPage.classList.remove('flex');
+
+        designPage.classList.remove('hidden');
+        designPage.classList.add('flex');
+
+        if (aboutSection) aboutSection.classList.remove('hidden');
+
+        body.style.backgroundColor = '#686FC6';
+
+        // Pastikan transisi tidak aktif
+        liquidOverlay.classList.remove('is-active');
+        body.classList.remove('liquid-transition-active');
+
+        // Atur audio langsung ke musicDesign jika unmuted
+        if (!isMuted) {
+            fadeIn(musicDesign);
+            currentMusic = musicDesign;
+        }
+    };
 
     // --- FUNGSI AUDIO ---
     const fadeOut = (audio) => {
@@ -69,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const aboutSection = document.getElementById('about-me-design');
     const waveTransition = document.getElementById('wave-transition-overlay');
+    
 
     // --- FUNGSI TRANSISI KAMERA ---
     const performCameraTransition = () => {
@@ -173,4 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollArrow.style.display = 'block';
         }
     });
+
+      initializeToDesignPage();
+    
 });
