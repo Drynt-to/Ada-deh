@@ -26,6 +26,7 @@ body.photo-active {
     background-color: #000000;
 }
 
+
 /* Menggunakan font kustom */
 .font-poppins { font-family: 'Poppins', sans-serif; }
 .font-drinks-fruit { font-family: 'Drinks Fruit', cursive; }
@@ -112,12 +113,33 @@ html {
   /* Memicu animasi */
   animation: draw-wipe 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
+.bg-pink-grid {
+    background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23ff73a5'/><rect height='1' width='40' fill='%23ff73a5'/></svg>");
+    background-repeat: repeat;
+}
+
 
 @keyframes draw-wipe {
   to {
     stroke-dashoffset: 0;
   }
 }
+@keyframes waveMotion {
+  0% {
+    d: path("M0,64L48,90.7C96,117,192,171,288,165.3C384,160,480,96,576,90.7C672,85,768,139,864,144C960,149,1056,107,1152,112C1248,117,1344,171,1392,197.3L1440,224L1440,320L0,320Z");
+  }
+  50% {
+    d: path("M0,80L48,100C96,120,192,160,288,150C384,140,480,100,576,95C672,90,768,135,864,140C960,145,1056,110,1152,120C1248,130,1344,180,1392,200L1440,220L1440,320L0,320Z");
+  }
+  100% {
+    d: path("M0,64L48,90.7C96,117,192,171,288,165.3C384,160,480,96,576,90.7C672,85,768,139,864,144C960,149,1056,107,1152,112C1248,117,1344,171,1392,197.3L1440,224L1440,320L0,320Z");
+  }
+}
+
+.animate-wave path {
+  animation: waveMotion 6s ease-in-out infinite;
+}
+
 #photo-page {
     position: relative; /* Ini penting agar z-index bisa diterapkan */
     z-index: 1;         /* Menempatkan seluruh seksi ini di lapisan bawah */

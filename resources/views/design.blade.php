@@ -113,30 +113,30 @@
                 </div>
             </section>
             <!-- Transisi Wave Lebar & Tinggi -->
-            <section id = "wave-transition-overlay" class="relative block w-full" style="height: 300px; overflow: hidden;">
+            <section id = "wave-transition-overlay" class="relative block w-full animate-wave" style="height: 300px; overflow: hidden;">
                 <svg viewBox="0 0 1440 320" class="block w-full h-full" preserveAspectRatio="none">
                     <path fill="url(#gradientWave)" fill-opacity="1" 
-                        d="M 0 64 L 48 90.7 C 96 117 192 171 288 165.3 C 384 160 480 96 576 90.7 C 672 85 768 139 864 144 C 960 149 1056 107 1152 112 C 1248 117 1340 185 1389 149 L 1461 105 L 1440 320 L 1392 320 C 1344 320 1248 320 1152 320 C 1056 320 960 320 864 320 C 768 320 672 320 576 320 C 480 320 384 320 288 320 C 192 320 96 320 48 320 L 0 320 Z">
+                        d="M 0 64 L 48 90.7 C 96 117 192 171 288 165.3 C 384 160 480 96 576 90.7 C 672 85 768 139 864 144 C 960 149 1056 107 1099 112 C 1248 117 1220 168 1306 154 L 1363 112 L 1364 324 L 1321 322 C 1344 320 1248 320 1152 320 C 1056 320 960 320 864 320 C 768 320 672 320 576 320 C 480 320 384 320 288 320 C 192 320 96 320 48 320 L 0 320 Z">
                     </path>
                     <defs>
                         <linearGradient id="gradientWave" x1="0" x2="0" y1="0" y2="1">
                             <stop offset="5%" stop-color="#686FC6" />
                             <stop offset="100%" stop-color="#FF8BB0" />
                         </linearGradient>
-                    </defs>
+                    </defs> 
                 </svg>
             </section>
 
 
             <!-- Bagian About Me Khusus Design -->
-            <section id="about-me-design" class="py-20 sm:py-32 px-6 sm:px-8 relative z-10 bg-[#FF8BB0]">
+            <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
                 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="relative animate-on-scroll">
                         <img src="images/virly-bunny.png" alt="Foto Virly" class="rounded-3xl shadow-2xl w-full h-auto z-10 relative transform hover:scale-105 transition-transform duration-300">
                         <div class="absolute -top-4 -left-4 w-full h-full bg-red-300 rounded-3xl transform -rotate-3 z-0"></div>
                     </div>
                     <div class="text-gray-800 animate-on-scroll" style="animation-delay: 0.2s;">
-                        <h2 class="text-6xl md:text-7xl font-brand mb-4" style="color: #6a994e;">Hello!</h2>
+                        <h2 class="font-drinks-fruit text-6xl md:text-7xl font-brand mb-4" style="color: #6a994e; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
                         <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
                             <p class="text-lg md:text-xl mb-4 leading-relaxed">I'm <strong>Virly</strong>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.</p>
                             <p class="text-lg md:text-xl mb-6 leading-relaxed">In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
@@ -182,15 +182,14 @@
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
 
-    {{-- SVG BARU UNTUK TRANSISI KEMBALI --}}
     <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
         <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
-            {{-- Garis tebal yang akan dianimasikan untuk menutupi layar --}}
+            <!-- {{-- Garis tebal yang akan dianimasikan untuk menutupi layar --}} -->
             <path class="scribble-transition-path" stroke="black" stroke-width="200" d="M -50,50 L 150,50" />
         </svg>
     </div>
 
-    {{-- KODE BARU: ELEMEN AUDIO DAN TOMBOL KONTROL MUSIK --}}
+    <!-- Audio - audio disini -->
     <audio id="music-design" loop>
         <source src="{{ asset('music/design-music.mp3') }}" type="audio/mpeg">
     </audio>
