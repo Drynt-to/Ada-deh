@@ -114,10 +114,9 @@ html {
   animation: draw-wipe 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 .bg-pink-grid {
-    background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23ff73a5'/><rect height='1' width='40' fill='%23ff73a5'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23EB6590'/><rect height='1' width='40' fill='%23EB6590'/></svg>");
     background-repeat: repeat;
 }
-
 
 @keyframes draw-wipe {
   to {

@@ -130,20 +130,30 @@
 
             <!-- Bagian About Me Khusus Design -->
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="relative animate-on-scroll">
-                        <img src="images/virly-bunny.png" alt="Foto Virly" class="rounded-3xl shadow-2xl w-full h-auto z-10 relative transform hover:scale-105 transition-transform duration-300">
-                        <div class="absolute -top-4 -left-4 w-full h-full bg-red-300 rounded-3xl transform -rotate-3 z-0"></div>
+            <div class="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative w-full max-w-2xl mx-auto z-10 transform hover:scale-105 transition-transform duration-300">
+                        <!-- SVG yang ada kelincinya -->
+                        <img src="svg/virly-bunny.svg" 
+                            class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
+                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" />
+
+                        <!-- SVG kepala -->
+                        <img src="svg/virly-head.svg" 
+                            alt="Kepala Virly luar bingkai" 
+                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
                     </div>
-                    <div class="text-gray-800 animate-on-scroll" style="animation-delay: 0.2s;">
-                        <h2 class="font-drinks-fruit text-6xl md:text-7xl font-brand mb-4" style="color: #6a994e; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
-                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-                            <p class="text-lg md:text-xl mb-4 leading-relaxed">I'm <strong>Virly</strong>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.</p>
-                            <p class="text-lg md:text-xl mb-6 leading-relaxed">In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
-                            <div class="font-semibold text-base md:text-lg space-y-2 text-gray-700">
-                                <p><strong>IG:</strong> @virlyvc | <strong>Line:</strong> virrvc | <strong>WA:</strong> +62 895406377667</p>
-                                <p><strong>Gmail:</strong> virlyvirginia.vv@gmail.com</p>
-                            </div>
+                    <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <h2 class="font-drinks-fruit text-5xl md:text-7xl font-brand mb-4" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
+                        <div class="bg-white backdrop-blur-sm p-6 rounded-2xl shadow-lg w-full max-w-none">
+                            <p class="font-poppins font-bold text-2xl md:text-3xl mb-6 leading-loose" style="color: #3267B4">
+                                 I'm <span class="italic font-extrabold bg-[#FFEA99] px-1 rounded">Virly</span>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.</p>
+                            <p class="font-poppins font-bold text-2xl md:text-3xl mb-6 leading-loose" style="color: #3267B4">
+                                 In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
+                        </div>
+                        <div class="font-poppins font-bold italic text-center text-2xl md:text-xl space-y-2 text-white mt-6"
+                            style="text-shadow: 1px 1px 1px #2A8E6B;">
+                        <p>IG: @virlyvc | Line: virrvc | WA: +62 895406377667</p>
+                        <p>Gmail: virlyvirginia.vv@gmail.com</p>
                         </div>
                     </div>
                 </div>
