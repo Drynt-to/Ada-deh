@@ -196,5 +196,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
       initializeToDesignPage();
-    
+
+    // === Animasi Scroll Masuk (About Section) ===
+    const animateOnScrollElements = document.querySelectorAll('#about-me-design .animate-on-scroll');
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                observer.unobserve(entry.target); // Hanya sekali animasi
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    animateOnScrollElements.forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+        scrollObserver.observe(el);
+    });
+
 });
