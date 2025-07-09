@@ -132,6 +132,32 @@
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
             <div class="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="relative w-full max-w-2xl mx-auto z-10 transform hover:scale-105 transition-transform duration-300">
+                        <!-- Coretan telinga kelinci -->
+                        <div class="absolute top-5 left-1/2 -translate-x-5 text-[#9BD1FF] wobbly-scribble z-30">
+                            <svg width="250" height="250" viewBox="0 0 100 140" fill="none">
+                                <path class="scribble-path" style="animation-delay: 1s;" d="M 30 90 C 25 39 98 -3 44 90" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                                <path class="scribble-path" style="animation-delay: 1s;" d="M 58 103 C 85 13 162 124 80 92" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                                <path class="scribble-path" style="animation-delay: 1s;" d="M 67 115 C 67 109 80 97 85 97" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <!-- Garis gelombang dekoratif bawah kiri -->
+                        <div class="absolute -bottom-26 left-5 text-[#FF673E] wobbly-scribble z-30">
+                            <svg width="300" height="300" viewBox="0 0 100 140" fill="none">
+                                <path class="scribble-path" style="animation-delay: 1s;" d="M 0 25 Q 22 -6 35 28 C 38 21 54 -6 72 29 C 74 26 95 -9 110 33" stroke="currentColor" stroke-width="8" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <!-- Elemen bulet - bulet lagi -->
+                        <div class="absolute bottom-35 right-30 text-[#646CCD]" style="animation-delay: 1s; animation-fill-mode: both;">
+                            <svg width="50" height="40" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="50" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <!-- Elemen bawah kanan coretan itu -->
+                        <div class="absolute -bottom-15 -right-5 translate-x-1 translate-y-1/5 text-[#FFE479] opacity-100 wobbly-scribble z-30">
+                            <svg width="500" height="500" viewBox="0 -50 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="scribble-path" style="animation-delay: 1s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 256 56 C 260 54 297 6 269 -2 C 261 -3 248 11 263 15 C 266 15 287 14 284 -22" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <!-- SVG yang ada kelincinya -->
                         <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
@@ -143,14 +169,14 @@
                             class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
                     </div>
                     <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <h2 class="font-drinks-fruit text-5xl md:text-7xl font-brand mb-4" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
+                        <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
                         <div class="bg-white backdrop-blur-sm p-6 rounded-2xl shadow-lg w-full max-w-none">
-                            <p class="font-poppins font-bold text-2xl md:text-3xl mb-6 leading-loose" style="color: #3267B4">
+                            <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose" style="color: #3267B4">
                                  I'm <span class="italic font-extrabold bg-[#FFEA99] px-1 rounded">Virly</span>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.</p>
-                            <p class="font-poppins font-bold text-2xl md:text-3xl mb-6 leading-loose" style="color: #3267B4">
+                            <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose" style="color: #3267B4">
                                  In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
                         </div>
-                        <div class="font-poppins font-bold italic text-center text-2xl md:text-xl space-y-2 text-white mt-6"
+                        <div class="font-poppins font-bold italic text-center text-xl md:text-2xl text-white mt-6"
                             style="text-shadow: 1px 1px 1px #2A8E6B;">
                         <p>IG: @virlyvc | Line: virrvc | WA: +62 895406377667</p>
                         <p>Gmail: virlyvirginia.vv@gmail.com</p>

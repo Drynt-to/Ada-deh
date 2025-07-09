@@ -110,7 +110,6 @@ html {
 }
 
 .animate-scribble-wipe {
-  /* Memicu animasi */
   animation: draw-wipe 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 .bg-pink-grid {
@@ -136,7 +135,7 @@ html {
 }
 
 .animate-wave path {
-  animation: waveMotion 6s ease-in-out infinite;
+  animation: waveMotion 3s ease-in-out infinite;
 }
 
 #photo-page {
