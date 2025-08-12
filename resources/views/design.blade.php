@@ -128,7 +128,7 @@
             </section>
 
 
-            <!-- Bagian About Me Khusus Design -->
+            <!-- Bagian About Me Khusus Design (yang photo beda lagi) -->
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
             <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="relative w-full max-w-2xl mx-auto z-10 transform hover:scale-105 transition-transform duration-300">
@@ -154,13 +154,13 @@
                                 <path class="scribble-path" style="animation-delay: 2s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 256 56 C 260 54 297 6 269 -2 C 261 -3 248 11 263 15 C 266 15 287 14 284 -22" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <img src="svg/virly-bunny.svg" 
+                        <!-- <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
                                     [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" />
 
                         <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
-                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
+                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" /> -->
                     </div>
                     <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
@@ -172,8 +172,13 @@
                         </div>
                         <div class="font-poppins font-bold italic text-center text-xl md:text-2xl text-white mt-6 animate-slide-in-up"
                             style="text-shadow: 1px 1px 1px #2A8E6B;">
-                        <p><a href="https://www.instagram.com/virlyvc/">IG: @virlyvc | Line: virrvc | WA: +62 895406377667</a></p>
-                        <p>Gmail: virlyvirginia.vv@gmail.com</p>
+                        <p>
+                            <a href="https://www.instagram.com/virlyvc/">IG: @virlyvc</a> | 
+                            <a href="https://line.me/ti/p/~virrvc">Line: virrvc</a> | 
+                            <a href="https://wa.me/62895406377667">WA: +62 895406377667</a>
+                        </p>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly,%0A%0ASelamat%20ulang%20tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a></p>
+                        <!-- Gmail: virlyvirginia.vv@gmail.com -->
                         </div>
                     </div>
                 </div>
