@@ -74,7 +74,7 @@
                                 <circle cx="50" cy="50" r="50" fill="currentColor" />
                             </svg>
                         </div>
-                        <!-- Teks -->
+                        <!-- Teks dan aset lainnya kayaknya (saya juga lupa) -->
                         <div class="absolute inset-0  flex items-center justify-center transform rotate-5">
                             <div class="bg-rose-50 animate-pop-in w-[calc(100%-23rem)] h-[calc(100%-27rem)] p-12 sm:p-16" 
                                 style="animation-delay: 0.7s; animation-fill-mode: both;">
@@ -105,14 +105,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Panah Scroll -->
+                <!-- Panah Scroll (minor tapi berguna) -->
                 <div id = "scroll-arrow" class="absolute bottom-10 animate-bounce">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </div>
             </section>
-            <!-- Transisi Wave Lebar & Tinggi -->
+            <!-- Transisi Wave Lebar & Tinggi (ada animasinya cuman ga seberapa keliatan) -->
             <section id = "wave-transition-overlay" class="relative block w-full animate-wave" style="height: 300px; overflow: hidden;">
                 <svg viewBox="0 0 1440 320" class="block w-full h-full" preserveAspectRatio="none">
                     <path fill="url(#gradientWave)" fill-opacity="1" 
@@ -132,35 +132,36 @@
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
             <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="relative w-full max-w-2xl mx-auto z-10 transform hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-5 left-1/2 -translate-x-5 text-[#9BD1FF] wobbly-scribble z-30 decor-item opacity-0">  {{-- UBAH LINE INI --}}
+                        <div class="absolute top-5 left-1/2 -translate-x-5 text-[#9BD1FF] wobbly-scribble z-30 decor-item opacity-0">  
                             <svg width="250" height="250" viewBox="0 0 100 140" fill="none">
                                 <path class="scribble-path" style="animation-delay: 2s;" d="M 30 90 C 25 39 98 -3 44 90" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
                                 <path class="scribble-path" style="animation-delay: 2s;" d="M 58 103 C 85 13 162 124 80 92" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
                                 <path class="scribble-path" style="animation-delay: 2s;" d="M 67 115 C 67 109 80 97 85 97" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <div class="absolute -bottom-26 left-5 text-[#FF673E] wobbly-scribble z-30 decor-item opacity-0"> {{-- UBAH LINE INI --}}
+                        <div class="absolute -bottom-26 left-5 text-[#FF673E] wobbly-scribble z-30 decor-item opacity-0"> 
                             <svg width="300" height="300" viewBox="0 0 100 140" fill="none">
                                 <path class="scribble-path" style="animation-delay: 2s;" d="M 0 25 Q 22 -6 35 28 C 38 21 54 -6 72 29 C 74 26 95 -9 110 33" stroke="currentColor" stroke-width="8" fill="none" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <div class="absolute bottom-35 right-30 text-[#646CCD] opacity-0 animate-pop-circle decor-item" style="animation-delay: 2s;"> {{-- UBAH LINE INI --}}
+                        <div class="absolute bottom-35 right-30 text-[#646CCD] opacity-0 animate-pop-circle decor-item" style="animation-delay: 2s;"> 
                             <svg width="50" height="40" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="50" fill="currentColor" />
                             </svg>
                         </div>
-                        <div class="absolute -bottom-15 -right-5 translate-x-1 translate-y-1/5 text-[#FFE479] wobbly-scribble z-30 decor-item opacity-0"> {{-- UBAH LINE INI --}}
+                        <div class="absolute -bottom-15 -right-5 translate-x-1 translate-y-1/5 text-[#FFE479] wobbly-scribble z-30 decor-item opacity-0"> 
                             <svg width="500" height="500" viewBox="0 -50 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="scribble-path" style="animation-delay: 2s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 256 56 C 260 54 297 6 269 -2 C 261 -3 248 11 263 15 C 266 15 287 14 284 -22" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <!-- <img src="svg/virly-bunny.svg" 
+                        <!-- Full gambar virly -->
+                        <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
                                     [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" />
-
+                        <!-- Yang Kepalanya doang -->
                         <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
-                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" /> -->
+                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
                     </div>
                     <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
@@ -170,17 +171,17 @@
                             <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose animate-slide-in-right" style="color: #3267B4">
                                  In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
                         </div>
-                        <div class="font-poppins font-bold italic text-center text-xl md:text-2xl text-white mt-6 animate-slide-in-up"
+                        <div class="contact-links font-poppins font-bold italic text-center text-xl md:text-2xl text-white mt-6 animate-slide-in-up"
                             style="text-shadow: 1px 1px 1px #2A8E6B;">
-                        <p>
-                            <a href="https://www.instagram.com/virlyvc/">IG: @virlyvc</a> | 
-                            <a href="https://line.me/ti/p/~virrvc">Line: virrvc</a> | 
-                            <a href="https://wa.me/62895406377667">WA: +62 895406377667</a>
-                        </p>
-                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly,%0A%0ASelamat%20ulang%20tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a></p>
-                        <!-- Gmail: virlyvirginia.vv@gmail.com -->
+                            <p>
+                                <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer">IG: @virlyvc</a> | 
+                                <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer">Line: virrvc</a> | 
+                                <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer">WA: +62 895406377667</a>
+                            </p>
+                            <p>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly%20Selamat%20Ulang%20Tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a>
+                            </p>
                         </div>
-                    </div>
                 </div>
             </section>
         </div>
@@ -219,7 +220,7 @@
 
     <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
         <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
-            <!-- {{-- Garis tebal yang akan dianimasikan untuk menutupi layar --}} -->
+            <!-- {{-- Liquid-ish(?) tebal yang akan dianimasikan untuk menutupi layar --}} -->
             <path class="scribble-transition-path" stroke="black" stroke-width="200" d="M -50,50 L 150,50" />
         </svg>
     </div>

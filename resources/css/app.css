@@ -115,6 +115,16 @@ html {
 .bg-pink-grid {
     background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23EB6590'/><rect height='1' width='40' fill='%23EB6590'/></svg>");
     background-repeat: repeat;
+    animation: subtleGrid 10s linear infinite alternate;
+}
+
+@keyframes subtleGrid {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 100px 50px; /* Arah dan kecepatan gerakan */
+        }
 }
 
 @keyframes draw-wipe {
@@ -191,4 +201,18 @@ html {
 }
 .liquid-transition-active #photo-page {
     z-index: -1 !important;
+}
+
+
+.contact-links a {
+            display: inline-block; 
+            transition: transform 0.2s ease-out, color 0.2s ease-out; 
+            text-decoration: none; 
+            color: white;
+}
+
+.contact-links a:hover {
+            transform: translateY(-4px) scale(1.1); 
+            color: #0084ff; 
+            text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF; 
 }
