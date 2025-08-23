@@ -216,3 +216,25 @@ html {
             color: #0084ff; 
             text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF; 
 }
+
+/* CSS BARU UNTUK MODAL */
+#about-me-modal.hidden {
+    display: none;
+}
+
+/* Animasi untuk card yang muncul dari bawah */
+@keyframes slideUpAndFadeIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    /* Menggunakan timing function yang mirip dengan animasi kamera Anda */
+    animation: slideUpAndFadeIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}

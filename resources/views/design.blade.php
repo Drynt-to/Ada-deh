@@ -182,6 +182,12 @@
                                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly%20Selamat%20Ulang%20Tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a>
                             </p>
                         </div>
+                        <div class="text-center mt-8">
+                                <button id="more-about-btn" 
+                                        class="bg-white text-[#3267B4] font-poppins font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                    More about me
+                                </button>
+                        </div>
                 </div>
             </section>
         </div>
@@ -218,6 +224,107 @@
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
 
+    <!-- Modal tambahan biar ga terlalu panjang -->
+    <div id="about-me-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
+
+        <div id="modal-card" class="relative bg-[#686FC6] rounded-2xl shadow-xl w-full max-w-4xl p-8 sm:p-12 text-gray-800 transform transition-all duration-300">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="space-y-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    
+                    <div class="space-y-4">
+                        <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Education :</h3>
+                        
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">Surabaya Cambridge School</p>
+                                <p class="font-poppins text-md text-[#08316C]">(Senior High School)</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">2022 - 2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">Petra Christian University</p>
+                                <p class="font-poppins text-md text-[#08316C]">(Visual Communication Design)</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">2024 - now</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Experiences :</h3>
+                        
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">Head of Art Department Stuco</p>
+                                <p class="font-poppins text-md text-[#08316C]">Senior High Student Council</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">2022 - 2023</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">Industrial Competition 2024 PCU</p>
+                                <p class="font-poppins text-md text-[#08316C]">Publication Creative Department</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">August 2024 - October 2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">Petra Civil Expo 2025 PCU</p>
+                                <p class="font-poppins text-md text-[#08316C]">Publication Creative Sub-Division</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">January 2025 - May 2025</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <div>
+                                <p class="font-poppins font-bold text-lg text-[#08316C]">And Many More!</p>
+                                <p class="font-poppins text-md text-[#08316C]">To Come</p>
+                                <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">Stay Tune!</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Softwares :</h3>
+                    <p class="font-poppins font-bold italic text-md text-[#08316C] -mt-0 ml-1">Apps I used for designing</p>
+
+                    <div class="flex items-center gap-1 mt-4">
+                        <div class="bg-[#FF673E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-6">
+                            <span class="font-drinks-fruit font-bold text-3xl text-white">Ps</span>
+                        </div>
+                        <div class="bg-[#148D6E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform rotate-3 z-10 -ml-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Logo" class="w-8 h-8">
+                        </div>
+                        <div class="bg-[#148D6E] w-28 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-2 z-0 -ml-2">
+                            <img src="{{ asset('svg/Canva_Logo_0.svg') }}" alt="Logo Canva" class="h-10">
+                        </div>
+                        <!-- <div class="bg-[#148D6E] w-28 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-2 z-0 -ml-2">
+                            <span class="font-drinks-fruit font-bold text-3xl text-white">Canva</span>
+                        </div> -->
+                        <div class="bg-[#FF673E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform rotate-6 z-10 -ml-2">
+                            <span class="font-drinks-fruit font-bold text-3xl text-white">Ai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
         <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
             <!-- {{-- Liquid-ish(?) tebal yang akan dianimasikan untuk menutupi layar --}} -->
@@ -258,5 +365,6 @@
             </filter>
         </defs>
     </svg>
+
 </body>
 </html>

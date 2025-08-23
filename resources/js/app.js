@@ -230,4 +230,29 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
         scrollObserver.observe(el);
     });
+    // === SCRIPT BARU UNTUK MODAL ABOUT ME ===
+        const moreAboutBtn = document.getElementById('more-about-btn');
+        const aboutMeModal = document.getElementById('about-me-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalCard = document.getElementById('modal-card');
+
+        const openModal = () => {
+            aboutMeModal.classList.remove('hidden');
+            modalCard.classList.add('animate-slide-up');
+            // Mencegah body di-scroll saat modal terbuka
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            aboutMeModal.classList.add('hidden');
+            modalCard.classList.remove('animate-slide-up'); // Hapus kelas agar animasi bisa diputar lagi
+            // Mengembalikan fungsi scroll body
+            document.body.style.overflow = '';
+        };
+
+        // Event listener untuk tombol
+        moreAboutBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal); // Modal juga tertutup saat overlay diklik
 });
