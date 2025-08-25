@@ -224,16 +224,25 @@
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
 
-    <!-- Modal tambahan biar ga terlalu panjang -->
+    <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
     <div id="about-me-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
 
         <div id="modal-card" class="relative bg-[#686FC6] rounded-2xl shadow-xl w-full max-w-4xl p-8 sm:p-12 text-gray-800 transform transition-all duration-300">
+            <div class="cloud-background">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="cloud cloud-3"></div>
+                <div class="cloud cloud-4"></div>
+            </div>
+
+            <div class="absolute inset-8 bg-white rounded-2xl z-5"></div>
+
             <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <div class="space-y-10">
+            <div class="relative z-10 space-y-10">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     
@@ -300,11 +309,13 @@
                     </div>
                 </div>
 
-                <div class="pt-4">
-                    <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Softwares :</h3>
-                    <p class="font-poppins font-bold italic text-md text-[#08316C] mt-1 ml-1">Apps I used for designing</p>
+                <div class="pt-4 flex items-center gap-6">
+                    <div>
+                        <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Softwares :</h3>
+                        <p class="font-poppins font-bold italic text-md text-[#08316C] mt-1 ml-1">Apps I used for designing</p>
+                    </div>
 
-                    <div class="flex items-center gap-3 mt-4">
+                    <div class="flex items-center gap-3">
                         <div class="bg-[#FF673E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-6">
                             <span class="font-drinks-fruit font-bold text-3xl text-white">Ps</span>
                         </div>
@@ -314,9 +325,6 @@
                         <div class="bg-[#148D6E] w-28 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-2 z-0 -ml-2">
                             <img src="{{ asset('svg/Canva_Logo_0.svg') }}" alt="Logo Canva" class="h-10">
                         </div>
-                        <!-- <div class="bg-[#148D6E] w-28 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-2 z-0 -ml-2">
-                            <span class="font-drinks-fruit font-bold text-3xl text-white">Canva</span>
-                        </div> -->
                         <div class="bg-[#FF673E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform rotate-6 z-10 -ml-2">
                             <span class="font-drinks-fruit font-bold text-3xl text-white">Ai</span>
                         </div>
