@@ -229,14 +229,24 @@
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
 
         <div id="modal-card" class="relative bg-[#686FC6] rounded-2xl shadow-xl w-full max-w-4xl p-8 sm:p-12 text-gray-800 transform transition-all duration-300">
-            <div class="cloud-background">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-            </div>
+            <div class="cloud-frame-container">
+                <div class="cloud-frame-body"></div>
 
-            <div class="absolute inset-8 bg-white rounded-2xl z-5"></div>
+              <div class="cloud-bump" style="width: 100px; height: 100px; top: -50px; left: 10%;"></div>
+                <div class="cloud-bump" style="width: 120px; height: 120px; top: -60px; left: 40%;"></div>
+                <div class="cloud-bump" style="width: 90px; height: 90px; top: -45px; right: 15%;"></div>
+                
+                <div class="cloud-bump" style="width: 100px; height: 100px; bottom: -50px; left: 20%;"></div>
+                <div class="cloud-bump" style="width: 130px; height: 130px; bottom: -65px; right: 30%;"></div>
+
+                <div class="cloud-bump" style="width: 100px; height: 100px; top: 10%; left: -50px;"></div>
+                <div class="cloud-bump" style="width: 110px; height: 110px; top: 50%; left: -55px;"></div>
+
+                <div class="cloud-bump" style="width: 90px; height: 90px; top: 25%; right: -45px;"></div>
+                <div class="cloud-bump" style="width: 120px; height: 120px; top: 60%; right: -60px;"></div>
+            </div>   
+
+            <!-- <div class="absolute inset-8 bg-white rounded-2xl z-5"></div> -->
 
             <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
