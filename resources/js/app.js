@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollArrow = document.getElementById('scroll-arrow');
 
     window.addEventListener('scroll', () => {
-        // Jika user scroll lebih dari 50px, sembunyikan panah
         if (window.scrollY > 50) {
             scrollArrow.style.display = 'none';
         } else {
@@ -203,27 +202,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Menjalankan animasi utama
+                // Menjalankan animasi utama untuk konten (Hello!, paragraf, dll)
                 entry.target.classList.add('opacity-100', 'translate-y-0');
                 entry.target.classList.remove('opacity-0', 'translate-y-10');
 
-                // --- KODE BARU DIMULAI ---
-                // Memberi jeda singkat sebelum memunculkan elemen dekoratif
-                setTimeout(() => {
-                    const decorItems = document.querySelectorAll('#about-me-design .decor-item');
-                    decorItems.forEach(item => {
-                        // Menghapus class opacity-0 akan membuat elemen terlihat
-                        // dan animasinya (seperti pop-circle dan scribble) akan berjalan
-                        item.classList.remove('opacity-0');
-                    });
-                }, 300); // Jeda 300ms, bisa disesuaikan
-                // --- KODE BARU SELESAI ---
 
-                observer.unobserve(entry.target); // Hanya sekali animasi
+                const decorItems = document.querySelectorAll('#about-me-design .decor-item');
+                    decorItems.forEach(item => {
+                        item.classList.remove('opacity-0');
+                        item.classList.add('start-animation');
+                });
+
+                observer.unobserve(entry.target); // Hanya jalankan animasi sekali
             }
         });
     }, {
-        threshold: 0.3
+        threshold: 0.1
     });
 
     animateOnScrollElements.forEach(el => {

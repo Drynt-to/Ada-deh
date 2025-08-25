@@ -54,6 +54,15 @@ html {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: draw-scribble 4.5s ease-out forwards;
+    /* animation-play-state: paused; */
+}
+
+#about-me-design .scribble-path {
+  animation-play-state: paused;
+}       
+
+#about-me-design .start-animation .scribble-path {
+  animation-play-state: running;
 }
 
 @keyframes draw-scribble {

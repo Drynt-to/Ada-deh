@@ -155,13 +155,13 @@
                             </svg>
                         </div>
                         <!-- Full gambar virly -->
-                        <img src="svg/virly-bunny.svg" 
+                        <!-- <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
-                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" />
+                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" /> -->
                         <!-- Yang Kepalanya doang -->
-                        <img src="svg/virly-head.svg" 
+                        <!-- <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
-                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
+                            class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" /> -->
                     </div>
                     <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
@@ -238,8 +238,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     
                     <div class="space-y-4">
-                        <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Education :</h3>
-                        
+                        <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Education :</h3>
+
                         <div class="flex items-start">
                             <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
                             <div>
@@ -260,7 +260,7 @@
                     </div>
 
                     <div class="space-y-4">
-                        <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Experiences :</h3>
+                        <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Experiences :</h3>
                         
                         <div class="flex items-start">
                             <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
@@ -293,7 +293,7 @@
                             <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">And Many More!</p>
-                                <p class="font-poppins text-md text-[#08316C]">To Come</p>
+                                <p class="font-poppins text-md text-[#08316C]">I think</p>
                                 <p class="mt-1"><span class="font-poppins font-bold italic bg-[#FFD0D0] text-[#08316C] text-sm font-bold px-2 py-1 rounded-full">Stay Tune!</span></p>
                             </div>
                         </div>
@@ -301,10 +301,10 @@
                 </div>
 
                 <div class="pt-4">
-                    <h3 class="font-drinks-fruit text-5xl text-[#E87A9A]">Softwares :</h3>
-                    <p class="font-poppins font-bold italic text-md text-[#08316C] -mt-0 ml-1">Apps I used for designing</p>
+                    <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Softwares :</h3>
+                    <p class="font-poppins font-bold italic text-md text-[#08316C] mt-1 ml-1">Apps I used for designing</p>
 
-                    <div class="flex items-center gap-1 mt-4">
+                    <div class="flex items-center gap-3 mt-4">
                         <div class="bg-[#FF673E] w-16 h-16 flex items-center justify-center rounded-2xl shadow-md transform -rotate-6">
                             <span class="font-drinks-fruit font-bold text-3xl text-white">Ps</span>
                         </div>
