@@ -95,11 +95,11 @@
                                             <image href="images/pencil.svg" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
                                         </g>
                                     </svg>
-                                    <div class="absolute -bottom-[2.5rem] w-full text-right pr-4 sm:pr-8 transform -rotate-10 animate-slide-in-right" style="animation-delay: 2.8s; animation-fill-mode: both;">
+                                    <!-- <div class="absolute -bottom-[2.5rem] w-full text-right pr-4 sm:pr-8 transform -rotate-10 animate-slide-in-right" style="animation-delay: 2.8s; animation-fill-mode: both;">
                                         <p class="font-poppins text-2xl font-extrabold italic" style="color: #3267B5; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;">
                                             Virly vc.
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -229,26 +229,13 @@
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
 
         <div id="modal-card" class="relative bg-[#686FC6] rounded-2xl shadow-xl w-full max-w-4xl p-8 sm:p-12 text-gray-800 transform transition-all duration-300">
-            <div class="cloud-frame-container">
+            <div id="cloud-frame" class="cloud-frame-container">
                 <div class="cloud-frame-body"></div>
-
-              <div class="cloud-bump" style="width: 100px; height: 100px; top: -50px; left: 10%;"></div>
-                <div class="cloud-bump" style="width: 120px; height: 120px; top: -60px; left: 40%;"></div>
-                <div class="cloud-bump" style="width: 90px; height: 90px; top: -45px; right: 15%;"></div>
-                
-                <div class="cloud-bump" style="width: 100px; height: 100px; bottom: -50px; left: 20%;"></div>
-                <div class="cloud-bump" style="width: 130px; height: 130px; bottom: -65px; right: 30%;"></div>
-
-                <div class="cloud-bump" style="width: 100px; height: 100px; top: 10%; left: -50px;"></div>
-                <div class="cloud-bump" style="width: 110px; height: 110px; top: 50%; left: -55px;"></div>
-
-                <div class="cloud-bump" style="width: 90px; height: 90px; top: 25%; right: -45px;"></div>
-                <div class="cloud-bump" style="width: 120px; height: 120px; top: 60%; right: -60px;"></div>
             </div>   
 
             <!-- <div class="absolute inset-8 bg-white rounded-2xl z-5"></div> -->
 
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             

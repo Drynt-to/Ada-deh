@@ -250,47 +250,24 @@ html {
     animation: slideUpAndFadeIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* ===== CSS UNTUK AWAN DI MODAL ===== */
-.cloud-background {
+/* ===== CSS BARU UNTUK FRAME AWAN ===== */
+.cloud-frame-container {
     position: absolute;
-    inset: 0;
-    pointer-events: none; /* Agar awan tidak bisa di-klik */
-    z-index: 0;
+    /* Atur posisi dan ukuran frame di sini */
+    inset: 4rem; /* Jarak dari tepi modal, sesuaikan jika perlu */
+    z-index: 5;
 }
 
-.cloud {
+.cloud-frame-body {
     position: absolute;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.6;
-    filter: blur(6px); /* Membuat tepian awan menjadi lebih lembut */
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px; /* Sedikit lengkungan untuk bagian tengah */
 }
 
-/* Posisi dan ukuran masing-masing awan */
-.cloud-1 {
-    width: 220px;
-    height: 70px;
-    top: 15%;
-    left: -60px;
-}
-
-.cloud-2 {
-    width: 260px;
-    height: 90px;
-    top: 25%;
-    right: -90px;
-}
-
-.cloud-3 {
-    width: 180px;
-    height: 60px;
-    bottom: 15%;
-    left: 25%;
-}
-
-.cloud-4 {
-    width: 320px;
-    height: 100px;
-    bottom: -50px;
-    right: 5%;
+.cloud-bump {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
 }
