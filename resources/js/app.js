@@ -253,3 +253,76 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModalBtn.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', closeModal); // Modal juga tertutup saat overlay diklik
 });
+// ...existing code...
+    let isTransitioning = false;
+    let isMuted = true;
+
+    // ===== FUNGSI BARU UNTUK MEMBUAT FRAME AWAN =====
+    function createCloudFrame() {
+        const frame = document.getElementById('cloud-frame');
+        if (!frame) return; // Hentikan jika elemen tidak ditemukan
+
+        // Hapus gumpalan lama jika ada, untuk mencegah duplikasi
+        frame.querySelectorAll('.cloud-bump').forEach(bump => bump.remove());
+
+        const width = frame.offsetWidth;
+        const height = frame.offsetHeight;
+        const bumpSize = 25; // Ukuran setiap gumpalan awan (lingkaran)
+        const overlap = 10; // Seberapa banyak gumpalan saling tumpang tindih
+
+        // Membuat gumpalan di sisi atas dan bawah
+        for (let i = 0; i < width; i += (bumpSize - overlap)) {
+            // Sisi atas
+            const topBump = document.createElement('div');
+            topBump.className = 'cloud-bump';
+            topBump.style.width = `${bumpSize}px`;
+            topBump.style.height = `${bumpSize}px`;
+            topBump.style.top = `-${bumpSize / 2}px`;
+            topBump.style.left = `${i}px`;
+            frame.appendChild(topBump);
+
+            // Sisi bawah
+            const bottomBump = document.createElement('div');
+            bottomBump.className = 'cloud-bump';
+            bottomBump.style.width = `${bumpSize}px`;
+            bottomBump.style.height = `${bumpSize}px`;
+            bottomBump.style.bottom = `-${bumpSize / 2}px`;
+            bottomBump.style.left = `${i}px`;
+            frame.appendChild(bottomBump);
+        }
+
+        // Membuat gumpalan di sisi kiri dan kanan
+        for (let i = 0; i < height; i += (bumpSize - overlap)) {
+            // Sisi kiri
+            const leftBump = document.createElement('div');
+            leftBump.className = 'cloud-bump';
+            leftBump.style.width = `${bumpSize}px`;
+            leftBump.style.height = `${bumpSize}px`;
+            leftBump.style.top = `${i}px`;
+            leftBump.style.left = `-${bumpSize / 2}px`;
+            frame.appendChild(leftBump);
+
+            // Sisi kanan
+            const rightBump = document.createElement('div');
+            rightBump.className = 'cloud-bump';
+            rightBump.style.width = `${bumpSize}px`;
+            rightBump.style.height = `${bumpSize}px`;
+            rightBump.style.top = `${i}px`;
+            rightBump.style.right = `-${bumpSize / 2}px`;
+            frame.appendChild(rightBump);
+        }
+    }
+
+    // Panggil fungsi saat modal muncul.
+    // Kita akan memanggilnya saat tombol "More About Me" di-klik.
+    // Ganti '#more-about-me-btn' dengan ID tombol Anda yang sebenarnya.
+    const openModalButton = document.getElementById('more-about-me-btn'); 
+    if(openModalButton) {
+        openModalButton.addEventListener('click', () => {
+            // Panggil fungsi setelah modalnya terlihat agar ukurannya benar
+            setTimeout(createCloudFrame, 50); 
+        });
+    }
+    
+    // Panggil juga saat ukuran window berubah, agar responsif
+    window.addEventListener('resize', createCloudFrame);
