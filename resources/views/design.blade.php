@@ -224,6 +224,10 @@
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
 
+    <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-90 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
+        {{-- Ikon akan diisi oleh JavaScript --}}
+    </button>
+    
     <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
     <div id="about-me-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
@@ -231,15 +235,17 @@
         <div id="modal-card" class="relative bg-[#686FC6] rounded-2xl shadow-xl w-full max-w-4xl p-8 sm:p-12 text-gray-800 transform transition-all duration-300">
             <div id="cloud-frame" class="cloud-frame-container">
                 <div class="cloud-frame-body"></div>
-            </div>   
+            </div>
 
             <!-- <div class="absolute inset-8 bg-white rounded-2xl z-5"></div> -->
 
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition-colors z-20">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-black hover:text-red-900 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <div class="relative z-10 space-y-10">
+            <div class="relative z-10">
+                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl"> 
+                    <div class="space-y-10">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     
@@ -247,7 +253,7 @@
                         <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Education :</h3>
 
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">Surabaya Cambridge School</p>
                                 <p class="font-poppins text-md text-[#08316C]">(Senior High School)</p>
@@ -256,7 +262,7 @@
                         </div>
 
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">Petra Christian University</p>
                                 <p class="font-poppins text-md text-[#08316C]">(Visual Communication Design)</p>
@@ -269,7 +275,7 @@
                         <h3 class="font-drinks-fruit text-5xl" style="color: #E87A9A; text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Experiences :</h3>
                         
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">Head of Art Department Stuco</p>
                                 <p class="font-poppins text-md text-[#08316C]">Senior High Student Council</p>
@@ -278,7 +284,7 @@
                         </div>
 
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">Industrial Competition 2024 PCU</p>
                                 <p class="font-poppins text-md text-[#08316C]">Publication Creative Department</p>
@@ -287,7 +293,7 @@
                         </div>
 
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">Petra Civil Expo 2025 PCU</p>
                                 <p class="font-poppins text-md text-[#08316C]">Publication Creative Sub-Division</p>
@@ -296,7 +302,7 @@
                         </div>
 
                         <div class="flex items-start">
-                            <span class="text-[#E87A9A] text-2xl mr-3 mt-1">✦</span>
+                            <span class="text-[#9f224a] text-2xl mr-3 mt-1">✦</span>
                             <div>
                                 <p class="font-poppins font-bold text-lg text-[#08316C]">And Many More!</p>
                                 <p class="font-poppins text-md text-[#08316C]">I think</p>
@@ -351,10 +357,6 @@
         <source src="{{ asset('sfx/liquid_swoosh.mp3') }}" type="audio/mpeg">
     </audio>
     
-
-    <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-50 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
-        {{-- Ikon akan diisi oleh JavaScript --}}
-    </button>
     <div id="liquid-transition-overlay">
         <div class="liquid-blob"></div>
         <div class="liquid-blob"></div>
