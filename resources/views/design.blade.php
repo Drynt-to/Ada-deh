@@ -228,7 +228,44 @@
         {{-- Ikon akan diisi oleh JavaScript --}}
     </button>
 
-    <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
+    <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
+        <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
+            <!-- {{-- Liquid-ish(?) tebal yang akan dianimasikan untuk menutupi layar --}} -->
+            <path class="scribble-transition-path" stroke="black" stroke-width="200" d="M -50,50 L 150,50" />
+        </svg>
+    </div>
+
+    <!-- Audio - audio disini bolo -->
+    <audio id="music-design" loop>
+        <source src="{{ asset('music/design-music.mp3') }}" type="audio/mpeg">
+    </audio>
+    <audio id="music-photo" loop>
+        <source src="{{ asset('music/photo-music.mp3') }}" type="audio/mpeg">
+    </audio>
+    <audio id="sfx-shutter">
+        <source src="{{ asset('sfx/camera-shutter.mp3') }}" type="audio/mpeg">
+    </audio>
+    <audio id="sfx-liquid">
+        <source src="{{ asset('sfx/liquid_swoosh.mp3') }}" type="audio/mpeg">
+    </audio>
+    
+    <div id="liquid-transition-overlay">
+        <div class="liquid-blob"></div>
+        <div class="liquid-blob"></div>
+        <div class="liquid-blob"></div>
+    </div>
+
+    <svg style="position:absolute; width:0; height:0;">
+        <defs>
+            <filter id="liquid-filter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+
+        <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
     <div id="about-me-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
 
@@ -336,42 +373,5 @@
             </div>
         </div>
     </div>
-    <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
-        <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
-            <!-- {{-- Liquid-ish(?) tebal yang akan dianimasikan untuk menutupi layar --}} -->
-            <path class="scribble-transition-path" stroke="black" stroke-width="200" d="M -50,50 L 150,50" />
-        </svg>
-    </div>
-
-    <!-- Audio - audio disini bolo -->
-    <audio id="music-design" loop>
-        <source src="{{ asset('music/design-music.mp3') }}" type="audio/mpeg">
-    </audio>
-    <audio id="music-photo" loop>
-        <source src="{{ asset('music/photo-music.mp3') }}" type="audio/mpeg">
-    </audio>
-    <audio id="sfx-shutter">
-        <source src="{{ asset('sfx/camera-shutter.mp3') }}" type="audio/mpeg">
-    </audio>
-    <audio id="sfx-liquid">
-        <source src="{{ asset('sfx/liquid_swoosh.mp3') }}" type="audio/mpeg">
-    </audio>
-    
-    <div id="liquid-transition-overlay">
-        <div class="liquid-blob"></div>
-        <div class="liquid-blob"></div>
-        <div class="liquid-blob"></div>
-    </div>
-
-    <svg style="position:absolute; width:0; height:0;">
-        <defs>
-            <filter id="liquid-filter">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="goo" />
-                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-            </filter>
-        </defs>
-    </svg>
-
 </body>
 </html>

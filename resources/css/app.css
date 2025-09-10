@@ -168,13 +168,11 @@ html {
 */
 #liquid-transition-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,0,0,0.3); /* DEBUG merah transparan */
-  z-index: 999999; /* pastikan paling atas */
-  display: none; /* default sembunyi */
+  inset: 0;
+  z-index: 9999 !important; /* pastikan di atas modal (z-50) */
+  visibility: hidden;
+  pointer-events: none;
+  filter: url('#liquid-filter');
 }
 
 body > #liquid-transition-overlay {
