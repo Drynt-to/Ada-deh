@@ -161,28 +161,33 @@ html {
     position: relative; /* Ini penting agar z-index bisa diterapkan */
     z-index: 1;         /* Menempatkan seluruh seksi ini di lapisan bawah */
 }
+/*
 |--------------------------------------------------------------------------
 | EFEK TRANSISI LIQUID
 |--------------------------------------------------------------------------
 */
 #liquid-transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden; /* Sembunyikan secara default */
-    z-index: 9999;
-    /* Terapkan filter SVG yang kita buat */
-    filter: url('#liquid-filter');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,0,0,0.3); /* DEBUG merah transparan */
+  z-index: 999999; /* pastikan paling atas */
+  display: none; /* default sembunyi */
 }
 
+body > #liquid-transition-overlay {
+  isolation: isolate; /* bikin root stacking context */
+}
+
+
 .liquid-blob {
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0);
-    /* Transisi yang lebih halus dan lambat */
-    transition: transform 1.6s cubic-bezier(0.83, 0, 0.17, 1);
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.6s cubic-bezier(0.83, 0, 0.17, 1);
+  opacity: 1; /* pastikan tidak transparan */
 }
 
 /* Posisi, ukuran, dan WARNA blob yang berbeda-beda */
@@ -202,11 +207,12 @@ html {
 
 /* Saat aktif, perbesar blob hingga menutupi layar */
 #liquid-transition-overlay.is-active {
-    visibility: visible;
+  visibility: visible;
+  pointer-events: all;
 }
 
 #liquid-transition-overlay.is-active .liquid-blob {
-    transform: scale(25);
+  transform: scale(35); /* perbesar lagi agar pasti menutup layar */
 }
 .liquid-transition-active #photo-page {
     z-index: -1 !important;
