@@ -340,7 +340,7 @@
                         <button class="prev absolute top-1/2 right-250 transform translate-y-1"><</button>
                     </div>
                 </div>
-                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[900] hidden p-4">
+                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] p-4 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
                     <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl font-bold">&times;</button>
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>

@@ -520,11 +520,12 @@ document.addEventListener('DOMContentLoaded', () => {
             isTransitioning = true;
 
             // Logika untuk mengubah background
+            // Logika untuk mengubah background
             if (category === 'committee') {
                 worksSection.classList.remove('bg-[#FF8BB0]', 'bg-pink-grid');
-                worksSection.classList.add('committee-active', 'bg-blue-grid');
+                worksSection.classList.add('bg-[#686FC6]', 'bg-blue-grid');
             } else {
-                worksSection.classList.remove('committee-active', 'bg-blue-grid');
+                worksSection.classList.remove('bg-[#686FC6]', 'bg-blue-grid');
                 worksSection.classList.add('bg-[#FF8BB0]', 'bg-pink-grid');
             }
 
