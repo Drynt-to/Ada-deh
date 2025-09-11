@@ -2,11 +2,6 @@
 
 @font-face {
     font-family: 'Drinks Fruit';
-    /* PENTING: Path ke font harus benar. 
-       Cara termudah adalah meletakkan folder 'fonts' Anda di dalam folder 'public'.
-       Lalu path-nya menjadi seperti ini (dengan garis miring di depan).
-       Ganti "NAMA_FILE_FONT_ANDA" dengan nama file yang sebenarnya.
-    */
     src: url("/fonts/NAMA_FILE_FONT_ANDA.woff2") format('woff2'),
          url("/fonts/NAMA_FILE_FONT_ANDA.ttf") format('truetype');
     font-weight: normal;
@@ -289,20 +284,20 @@ body > #liquid-transition-overlay {
 
 .slider {
     position: relative;
-    width: 100%;
-    max-width: 5000px; /* Batasi lebar maksimum slider */
-    height: 520px;
+    width: 130%;
+    max-width: 1500px; /* Batasi lebar maksimum slider */
+    height: 900px;
     overflow: hidden;
 }
 
 .item {
     position: absolute;
-    width: 300px;
-    height: 480px;
+    width: 450px;
+    height: 800px;
     text-align: justify;
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
     transition: 0.5s;
     left: calc(50% - 160px);
     top: 0;
