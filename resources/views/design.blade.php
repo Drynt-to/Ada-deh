@@ -43,10 +43,10 @@
                     <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
                 </button>
                 <!-- Portfolio Design Virly -->
-                <div class="relative w-full max-w-7xl">
+                <div class="relative w-full max-w-7xl initial-animation">
                     <div class="relative">
                         <img src="images/bingkai-pink-anda.svg" 
-                            class="animate-pop-in transform rotate-5" 
+                            class="animate-pop-in transform rotate-5 initial-animation" 
                             style="width: 100%; height: 100%; animation-delay: 0.2s; animation-fill-mode: both;" 
                             alt="Bingkai">
                         <!-- Elemen atas kiri coretan itu -->
@@ -264,7 +264,7 @@
         </defs>
     </svg>
 
-        <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
+    <!-- Modal tambahan (about me design) biar ga terlalu panjang -->
     <div id="about-me-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
 
@@ -273,14 +273,27 @@
                 <div class="cloud-frame-body"></div>
             </div>
 
-            <!-- <div class="absolute inset-8 bg-white rounded-2xl z-5"></div> -->
+            <!-- Scribble kiri atas buat modal -->
+            <div class="absolute top-10 left-10 -translate-x-1/4 -translate-y-1/3 text-blue-300 opacity-100 wobbly-scribble z-60">
+                            <svg width="350" height="350" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="scribble-path" style="animation-delay: 3s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 123 156 C 57 125 122 91 113 124 C 103 149 64 119 60 114" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+            </div>
+
+            <!-- Dot kuning di kiri atas -->
+            <div class="absolute top-10 -left-10 text-yellow-200 opacity-0 animate-pop-circle" style="animation-delay: 3.8s; animation-fill-mode: both;">
+                            <svg width="20" height="20" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="50" fill="currentColor" />
+                            </svg>
+            </div>
 
             <button id="close-modal-btn" class="absolute top-4 right-4 text-black hover:text-red-900 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
+            
             <div class="relative z-10">
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl"> 
+                <div class="bg-white backdrop-blur-sm p-8 rounded-2xl"> 
                     <div class="space-y-10">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
