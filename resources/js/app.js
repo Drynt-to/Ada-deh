@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const liquidOverlay = document.getElementById('liquid-transition-overlay');
     const sfxLiquid = document.getElementById('sfx-liquid');
     const aboutSection = document.getElementById('about-me-design');
-    const worksSection = document.getElementById('my-works-section');
+    const worksSection = document.getElementById('my-works-section-design');
+    const footerSection = document.getElementById('footer-design');
     const waveTransition = document.getElementById('wave-transition-overlay');
     const scrollArrow = document.getElementById('scroll-arrow');
 
@@ -125,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (aboutSection) aboutSection.classList.add('hidden');
             if (waveTransition) waveTransition.classList.add('hidden');
             if (worksSection) worksSection.classList.add('hidden');
+            if (footerSection) footerSection.classList.add('hidden');
 
             photoPage.classList.remove('hidden');
             photoPage.classList.add('flex');
@@ -173,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.backgroundColor = '#686FC6';
             if (waveTransition) waveTransition.classList.remove('hidden');
             if (worksSection) worksSection.classList.remove('hidden');
+            if (footerSection) footerSection.classList.remove('hidden');
 
             liquidOverlay.classList.remove('is-active');
 

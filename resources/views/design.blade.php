@@ -277,7 +277,7 @@
                     </div>
                 </div>
             </section>
-            <section id="my-works-section" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
+            <section id="my-works-section-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
                 <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
                 <!-- Full gambar Cathalina 3D -->
                 <img src="images\Cathalina.png" class="w-2/3 h-auto -rotate-20 absolute z-0 translate-y-[100px] translate-x-[440px]" />
@@ -344,18 +344,7 @@
                 </div>
             </section>
         </div>
-        <section id="footer" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
-            <div class="absolute top-0 le t-0 -translate-x-1/4 -translate-y-1/3 text-yellow-200 opacity-20 wobbly-scribble">
-                    <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 59 198 C 20 120 91 115 75 151 C 33 187 56 61 106 83 C 114 92 98 114 87 109 C 68 94 97 68 125 64" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/3 text-blue-300 opacity-20 wobbly-scribble">
-                    <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 31 189 C 100 189 86 91 49 128 C 35 167 155 142 106 83 C 94 73 65 89 84 107 C 104 118 124 108 147 69" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
+        <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto text-center relative z-10">
                     <div class="flex justify-center  mb-8">
                         <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
