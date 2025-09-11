@@ -316,4 +316,52 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeAudio();
     initializeToDesignPage();
 
+        // --- KODE BARU UNTUK SLIDER ---
+    const sliderItems = document.querySelectorAll('.slider .item');
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+
+    if (sliderItems.length > 0) {
+        let active = Math.floor(sliderItems.length / 2); // Mulai dari slide tengah
+
+        function loadShow() {
+            let stt = 0;
+            sliderItems[active].style.transform = `none`;
+            sliderItems[active].style.zIndex = 1;
+            sliderItems[active].style.filter = 'none';
+            sliderItems[active].style.opacity = 1;
+            for (var i = active + 1; i < sliderItems.length; i++) {
+                stt++;
+                sliderItems[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                sliderItems[i].style.zIndex = -stt;
+                sliderItems[i].style.filter = 'blur(5px)';
+                sliderItems[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+            stt = 0;
+            for (var i = active - 1; i >= 0; i--) {
+                stt++;
+                sliderItems[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+                sliderItems[i].style.zIndex = -stt;
+                sliderItems[i].style.filter = 'blur(5px)';
+                sliderItems[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+        }
+
+        loadShow();
+
+        if (nextButton) {
+            nextButton.onclick = function() {
+                active = active + 1 < sliderItems.length ? active + 1 : active;
+                loadShow();
+            }
+        }
+
+        if (prevButton) {
+            prevButton.onclick = function() {
+                active = active - 1 >= 0 ? active - 1 : active;
+                loadShow();
+            }
+        }
+    }
+    // --- AKHIR KODE SLIDER ---
 });

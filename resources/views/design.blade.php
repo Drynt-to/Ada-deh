@@ -189,6 +189,39 @@
                         </div>
                 </div>
             </section>
+            <section class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container">
+                <div class="slider">
+                    <div class="item">
+                        <img src="{{ asset('images/grain-texture.png') }}" alt="Deskripsi Karya 1">
+                    </div>
+                    <div class="item">
+                        <h1>Karya 2</h1>
+                        <p>Deskripsi singkat tentang karya kedua Anda.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Karya 3</h1>
+                        <p>Deskripsi singkat tentang karya ketiga Anda.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Karya 4</h1>
+                        <p>Deskripsi singkat tentang karya keempat Anda.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Karya 5</h1>
+                        <p>Deskripsi singkat tentang karya kelima Anda.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Karya 6</h1>
+                        <p>Deskripsi singkat tentang karya keenam Anda.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Karya 7</h1>
+                        <p>Deskripsi singkat tentang karya ketujuh Anda.</p>
+                    </div>
+                    <button id="next">></button>
+                    <button id="prev"><</button>
+                </div>
+            </section>
         </div>
         <!-- Portfolio Photography Virly -->
         <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
