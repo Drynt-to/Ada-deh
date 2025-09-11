@@ -154,9 +154,9 @@
                             </svg>
                         </div>
                         <!-- Foto Virly -->
-                        <img src="svg/virly-bunny.svg" 
-                            class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
-                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop_shadow(0_15px_white)_drop_shadow(0_-15px_white)]" />
+                        <img src="{{ asset('svg/virly-bunny.svg') }}"
+                            class="w-full h-auto relative z-10 translate-y-[-50px]
+                                    [filter:drop-shadow(15px_0_0_white)_drop-shadow(-15px_0_0_white)_drop-shadow(0_15px_0_white)_drop-shadow(0_-15px_0_white)]" />
                         <!-- Foto kepala Virly di luar bingkai -->
                         <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
@@ -279,7 +279,7 @@
                     </div>
                 </div>
             </section>
-            <section id="my-works-section-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
+            <section id="my-works-section-design" class="w-full h-auto bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
                 <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
                 <!-- Full gambar Cathalina 3D -->
                 <img src="images\Cathalina.png" class="w-2/3 h-auto -rotate-20 absolute z-0 translate-y-[100px] translate-x-[440px]" />
@@ -340,7 +340,7 @@
                         <button class="prev absolute top-1/2 right-250 transform translate-y-1"><</button>
                     </div>
                 </div>
-                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] p-4 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[900] hidden p-4">
                     <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl font-bold">&times;</button>
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>
@@ -348,7 +348,7 @@
         </div>
         <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto text-center relative z-10">
-                    <div class="flex justify-center  mb-8">
+                    <div class="flex justify-center mb-2">
                         <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/>
@@ -365,13 +365,13 @@
                         </a>
                     </div>
                     
-                    <div class="flex justify-center space-x-8 mb-10 text-lg font-semibold">
+                    <div class="flex justify-center space-x-8 mb-2 text-lg font-semibold">
                         <a href="#" id="home-link" class="font-poppins hover:text-gray-300 transition-colors">Home</a>
                     </div>
 
-                    <div class="w-full h-px bg-gray-700 mb-8"></div>
+                    <div class="w-full h-px bg-gray-700 mb-3"></div>
 
-                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly</p>
+                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra</p>
                 </div>
         </section>
     </main>
