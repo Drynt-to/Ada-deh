@@ -400,3 +400,34 @@ body > #liquid-transition-overlay {
     background-color: rgba(0, 0, 0, 0.6); /* Warna latar saat disentuh mouse */
     transform: translateY(-50%) scale(1.1); /* Sedikit membesar saat disentuh mouse */
 }
+
+/* CSS BARU UNTUK LIGHTBOX/POP-UP */
+#image-lightbox {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#image-lightbox.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#image-lightbox:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+#lightbox-image {
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+#close-lightbox {
+    transition: transform 0.2s ease;
+}
+
+#close-lightbox:hover {
+    transform: scale(1.2);
+}

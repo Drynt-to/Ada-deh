@@ -459,5 +459,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // --- KODE BARU UNTUK LIGHTBOX/POP-UP ---
+    const imageLightbox = document.getElementById('image-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeLightboxBtn = document.getElementById('close-lightbox');
+    const sliderImages = document.querySelectorAll('.slider .item img');
+
+    // Fungsi untuk membuka lightbox
+    function openLightbox(event) {
+        const imageUrl = event.target.src;
+        if (imageLightbox && lightboxImage) {
+            lightboxImage.src = imageUrl;
+            imageLightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Mencegah scrolling saat lightbox terbuka
+        }
+    }
+
+    // Fungsi untuk menutup lightbox
+    function closeLightbox() {
+        if (imageLightbox) {
+            imageLightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Mengembalikan fungsi scrolling
+        }
+    }
+
+    // Tambahkan event listener klik ke semua gambar slider
+    sliderImages.forEach(img => {
+        img.addEventListener('click', openLightbox);
+        img.style.cursor = 'pointer'; // Mengubah kursor untuk menandakan gambar bisa diklik
+    });
+
+    // Event listener untuk tombol close
+    if (closeLightboxBtn) {
+        closeLightboxBtn.addEventListener('click', closeLightbox);
+    }
+
+    // Event listener untuk menutup saat mengklik area di luar gambar
+    if (imageLightbox) {
+        imageLightbox.addEventListener('click', (event) => {
+            if (event.target === imageLightbox) {
+                closeLightbox();
+            }
+        });
+    }
 });
     // --- AKHIR KODE SLIDER ---
