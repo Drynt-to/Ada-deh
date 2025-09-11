@@ -129,7 +129,7 @@
 
             <!-- Bagian About Me Khusus Design (yang photo beda lagi) -->
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
-            <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="relative w-full max-w-2xl mx-auto z-10 transform hover:scale-105 transition-transform duration-300">
                         <div class="absolute top-5 left-1/2 -translate-x-5 text-[#9BD1FF] wobbly-scribble z-30 decor-item opacity-0">  
                             <svg width="250" height="250" viewBox="0 0 100 140" fill="none">
@@ -149,44 +149,107 @@
                             </svg>
                         </div>
                         <div class="absolute -bottom-15 -right-5 translate-x-1 translate-y-1/5 text-[#FFE479] wobbly-scribble z-30 decor-item opacity-0"> 
-                            <svg width="500" height="500" viewBox="0 -50 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="500" height="500" viewBox="0 -50 320 200" fill="none" xmlns="http://www.w.org/2000/svg">
                                 <path class="scribble-path" style="animation-delay: 2s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 256 56 C 260 54 297 6 269 -2 C 261 -3 248 11 263 15 C 266 15 287 14 284 -22" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <!-- Full gambar virly -->
                         <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
-                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop-shadow(0_15px_white)_drop-shadow(0_-15px_white)]" />
-                        <!-- Yang Kepalanya doang -->
+                                    [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop_shadow(0_15px_white)_drop_shadow(0_-15px_white)]" />
                         <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
                             class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
                     </div>
-                    <div class="animate-on-scroll" style="animation-delay: 0.2s; max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
-                        <div class="bg-white backdrop-blur-sm p-6 rounded-2xl shadow-lg w-full max-w-none animate-slide-in-right">
-                            <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose animate-slide-in-right" style="color: #3267B4">
-                                 I'm <span class="italic font-extrabold bg-[#FFEA99] px-1 rounded">Virly</span>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.</p>
-                            <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose animate-slide-in-right" style="color: #3267B4">
+                    
+                    <div class="animate-on-scroll flex flex-col space-y-8" style="animation-delay: 0.2s;">
+                        <div>
+                            <h2 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-4 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">Hello!</h2>
+                            <div class="bg-white backdrop-blur-sm p-6 rounded-2xl shadow-lg w-full max-w-none animate-slide-in-right">
+                                <p class="font-poppins font-bold text-2xl md:text-2xl leading-relaxed animate-slide-in-right" style="color: #3267B4">
+                                    I'm <span class="italic font-extrabold bg-[#FFEA99] px-1 rounded">Virly</span>, a Graphic Designer based in Surabaya, Indonesia. With a passion for being creative, I love trying different kinds of visual styles that spark joy.
+                                </p>
+                                 <p class="font-poppins font-bold text-2xl md:text-2xl mb-6 leading-loose animate-slide-in-right" style="color: #3267B4">
                                  In this portfolio, you'll find a curated selection of my work ranging from infographics to mockups. I'm excited on collaborating on future projects and bringing our creative visions to life together!</p>
+                            </div>
                         </div>
-                        <div class="contact-links font-poppins font-bold italic text-center text-xl md:text-2xl text-white mt-6 animate-slide-in-up"
-                            style="text-shadow: 1px 1px 1px #2A8E6B;">
-                            <p>
-                                <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer">IG: @virlyvc</a> | 
-                                <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer">Line: virrvc</a> | 
-                                <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer">WA: +62 895406377667</a>
-                            </p>
-                            <p>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly%20Selamat%20Ulang%20Tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a>
-                            </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <div class="relative inline-block">
+                                    <h3 class="font-drinks-fruit text-4xl md:text-5xl font-brand mb-4" style="color: #2A8E6B; text-shadow: -3px -3px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;">Skills</h3>
+                                </div>
+                                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg mt-4 font-poppins font-bold text-lg text-[#3267B4]">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span>Graphic Design</span>
+                                        <span class="text-[#FA643B]">Illustration</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-pink-400 to-orange-400 h-2.5 rounded-full"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center mt-4 mb-2">
+                                        <span>Photography</span>
+                                        <span class="text-[#FA643B]">Branding</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-orange-400 to-pink-400 h-2.5 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div>
+                                <h3 class="font-drinks-fruit text-4xl md:text-5xl font-brand mb-4" style="color: #2A8E6B; text-shadow: -3px -3px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;">Languages</h3>
+                                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg mt-4 font-poppins text-[#3267B4] space-y-3">
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="text-red-500 text-xl mr-2">✦</span>
+                                            <p class="font-bold text-md">Indonesian <span class="text-xs font-medium text-gray-500">Native</span></p>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-blue-500 h-3 rounded-full" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="text-red-500 text-xl mr-2">✦</span>
+                                            <p class="font-bold text-md">English <span class="text-xs font-medium text-gray-500">Fluent</span></p>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-blue-500 h-3 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="text-red-500 text-xl mr-2">✦</span>
+                                            <p class="font-bold text-md">Chinese <span class="text-xs font-medium text-gray-500">Moderate</span></p>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-blue-500 h-3 rounded-full" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center mt-8">
-                                <button id="more-about-btn" 
-                                        class="bg-white text-[#3267B4] font-poppins font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300">
-                                    More about me
-                                </button>
+
+                        <div>
+                            <div class="contact-links font-poppins font-bold italic text-center text-xl md:text-2xl text-white animate-slide-in-up"
+                                style="text-shadow: 1px 1px 1px #2A8E6B;">
+                                <p>
+                                    <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer">IG: @virlyvc</a> | 
+                                    <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer">Line: virrvc</a> | 
+                                    <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer">WA: +62 895406377667</a>
+                                </p>
+                                <p>
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly%20Selamat%20Ulang%20Tahun!!!" target="_blank" rel="noopener noreferrer">Gmail: virlyvirginia.vv@gmail.com</a>
+                                </p>
+                            </div>
+                            <div class="text-center mt-8">
+                                    <button id="more-about-btn" 
+                                            class="bg-white text-[#3267B4] font-poppins font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                        More about me
+                                    </button>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </section>
             <!-- Portfolio Photography Virly -->
@@ -256,6 +319,7 @@
                             <img src="{{ asset('images/Asset 10@4x.png') }}" alt="Student Council 10">
                         </div>
                         <button class="next absolute top-1/2 right-[20px] transform -translate-y-1/2">></button>
+
                         <button class="prev absolute top-1/2 left-[20px] transform -translate-y-1/2"><</button>
                     </div>
                 </div>
@@ -276,6 +340,45 @@
                 </div>
             </section>
         </div>
+        <section id="footer" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
+            <div class="absolute top-0 le t-0 -translate-x-1/4 -translate-y-1/3 text-yellow-200 opacity-20 wobbly-scribble">
+                    <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 59 198 C 20 120 91 115 75 151 C 33 187 56 61 106 83 C 114 92 98 114 87 109 C 68 94 97 68 125 64" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/3 text-blue-300 opacity-20 wobbly-scribble">
+                    <svg width="400" height="400" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 31 189 C 100 189 86 91 49 128 C 35 167 155 142 106 83 C 94 73 65 89 84 107 C 104 118 124 108 147 69" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+                    <div class="flex justify-center  mb-8">
+                        <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/>
+                            </svg>
+                        </a> 
+                        <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Line">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M21.933 5.346c-1.334-.8-3.089-1.12-5.111-1.12-1.322 0-2.5.213-3.622.64-1.011.373-1.889.898-2.689 1.582-.8.684-1.411 1.498-1.844 2.445-.433.947-.644 1.991-.644 3.125s.211 2.178.644 3.125c.433.947 1.044 1.76 1.844 2.445s1.678 1.209 2.689 1.582c1.122.427 2.3.64 3.622.64 2.022 0 3.778-.32 5.111-1.12s2.344-1.889 3-3.289l-2.022-1.12c-.522.924-1.2 1.627-2.033 2.107s-1.756.72-2.778.72c-.856 0-1.656-.16-2.4-.48-.744-.32-1.389-.769-1.933-1.343-.544-.573-.978-1.253-1.3-2.044-.322-.791-.489-1.662-.489-2.613s.167-1.822.5-2.613c.333-.791.756-1.472 1.3-2.044s1.189-1.022 1.933-1.342c.744-.32 1.544-.48 2.4-.48.989 0 1.9.24 2.733.72s1.511 1.182 2.033 2.107l2.022-1.12c-.633-1.4-1.644-2.489-3.022-3.289zM8.333 10.889V9h2.222v5h-2.222v-3.111zm-4.444 0h2.222V14H3.889v-3.111zm11.111 0h2.222V14h-2.222v-3.111z"/></svg>
+                        </a>
+                        <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="WhatsApp">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.062l-1.07 3.922 4.02-1.056zm5.012-5.217c-.208-.106-1.257-.62-1.451-.691-.195-.07-.335-.105-.476.105s-.549.691-.673.832c-.124.14-.248.158-.455.052-.207-.105-1.026-.381-1.951-1.206-.719-.643-1.207-1.44-1.349-1.688-.142-.249-.015-.385.09-5.111.101-.125.207-.207.312-.312.105-.106.141-.175.208-.282.067-.106.033-.195 0-.302s-.476-1.133-.652-1.554c-.174-.421-.35-.366-.475-.371s-.248-.008-.372-.008c-.124 0-.323.044-.498.221s-.652.62-.652 1.511c0 .891.667 1.751.752 1.867.085.116 1.313 2.016 3.176 2.83.43.195.766.313 1.036.401.446.146.821.125 1.125.076.363-.057 1.257-.514 1.432-.999.176-.485.176-.9.124-1.001s-.158-.158-.323-.266z"/></svg>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Gmail">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                        </a>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-8 mb-10 text-lg font-semibold">
+                        <a href="#" id="home-link" class="hover:text-gray-300 transition-colors">Home</a>
+                    </div>
+
+                    <div class="w-full h-px bg-gray-700 mb-8"></div>
+
+                    <p class="font-poppins text-gray-400 text-sm font-medium">Copyright ©2025, Designed by Virly</p>
+                </div>
+        </section>
     </main>
     <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">
@@ -444,5 +547,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
