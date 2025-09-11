@@ -153,9 +153,11 @@
                                 <path class="scribble-path" style="animation-delay: 2s; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.25));" d="M 256 56 C 260 54 297 6 269 -2 C 261 -3 248 11 263 15 C 266 15 287 14 284 -22" stroke="currentcolor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
+                        <!-- Foto Virly -->
                         <img src="svg/virly-bunny.svg" 
                             class="w-full h-auto relative z-10 translate-y-[-50px] translate-x-[0px]
                                     [filter:drop-shadow(15px_0_white)_drop-shadow(-15px_0_white)_drop_shadow(0_15px_white)_drop_shadow(0_-15px_white)]" />
+                        <!-- Foto kepala Virly di luar bingkai -->
                         <img src="svg/virly-head.svg" 
                             alt="Kepala Virly luar bingkai" 
                             class="absolute top-68.5 left-82.5 w-[32%] h-auto z-20 -translate-x-4 -translate-y-8 scale-110" />
@@ -338,7 +340,7 @@
                         <button class="prev absolute top-1/2 right-250 transform translate-y-1"><</button>
                     </div>
                 </div>
-                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[100] hidden p-4">
+                <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[900] hidden p-4">
                     <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl font-bold">&times;</button>
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>
