@@ -271,6 +271,61 @@ body > #liquid-transition-overlay {
     border-radius: 50%; /* Membuatnya menjadi lingkaran */
 }
 
+/* CSS BARU UNTUK TOMBOL KATEGORI */
+.category-btn {
+    background-color: white;
+    color: #3267B4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.category-btn:hover {
+    transform: scale(1.05);
+}
+
+.category-btn.active {
+    background-color: #3267B4;
+    color: white;
+    border: 2px solid white;
+}
+
+/* CSS BARU UNTUK SLIDER WRAPPER DAN TRANSISI */
+.slider-wrapper {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-wrapper.hidden {
+    display: none;
+}
+
+.slider-wrapper.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.slider-wrapper.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.slider-wrapper.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
 /* CSS BARU UNTUK SLIDER */
 .slider-container {
     min-height: 100vh;
@@ -309,23 +364,39 @@ body > #liquid-transition-overlay {
     object-fit: cover; /* Ini akan membuat gambar menutupi area tanpa penyok */
     border-radius: 10px; /* Menyamakan dengan lengkungan .item */
 }
-#next, #prev {
+/* GANTI DENGAN BLOK INI - Styling untuk Tombol Slider */
+.slider-wrapper .next,
+.slider-wrapper .prev {
     position: absolute;
-    top: 40%;
-    color: #fff;
-    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%); /* Agar posisi vertikal benar-benar di tengah */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3); /* Latar belakang semi-transparan agar terlihat di semua gambar */
     border: none;
-    font-size: xxx-large;
-    font-family: monospace;
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    width: 60px;  /* Lebar tombol */
+    height: 60px; /* Tinggi tombol */
+    font-size: 2.5rem; /* Ukuran ikon '>' dan '<' */
     font-weight: bold;
     cursor: pointer;
     z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Bayangan teks agar lebih terbaca */
 }
 
-#prev {
-    left: 10%; /* Sesuaikan posisi tombol */
+.slider-wrapper .prev {
+    left: 20px; /* Posisi tombol '<' */
 }
 
-#next {
-    right: 10%; /* Sesuaikan posisi tombol */
+.slider-wrapper .next {
+    right: 20px; /* Posisi tombol '>' */
+}
+
+.slider-wrapper .next:hover,
+.slider-wrapper .prev:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Warna latar saat disentuh mouse */
+    transform: translateY(-50%) scale(1.1); /* Sedikit membesar saat disentuh mouse */
 }

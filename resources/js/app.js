@@ -366,5 +366,98 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    // --- AKHIR KODE SLIDER ---
+    // --- KODE BARU UNTUK KATEGORI DAN SLIDER GANDA ---
+
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const sliderWrappers = document.querySelectorAll('.slider-wrapper');
+
+    // Fungsi untuk menginisialisasi sebuah slider
+    function initializeSlider(sliderWrapper) {
+        const sliderItems = sliderWrapper.querySelectorAll('.slider .item');
+        const nextButton = sliderWrapper.querySelector('.next');
+        const prevButton = sliderWrapper.querySelector('.prev');
+
+        if (sliderItems.length > 0) {
+            let active = Math.floor(sliderItems.length / 2); // Mulai dari slide tengah
+
+            function loadShow() {
+                let stt = 0;
+                sliderItems[active].style.transform = `none`;
+                sliderItems[active].style.zIndex = 1;
+                sliderItems[active].style.filter = 'none';
+                sliderItems[active].style.opacity = 1;
+                for (var i = active + 1; i < sliderItems.length; i++) {
+                    stt++;
+                    sliderItems[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                    sliderItems[i].style.zIndex = -stt;
+                    sliderItems[i].style.filter = 'blur(5px)';
+                    sliderItems[i].style.opacity = stt > 2 ? 0 : 0.6;
+                }
+                stt = 0;
+                for (var i = active - 1; i >= 0; i--) {
+                    stt++;
+                    sliderItems[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+                    sliderItems[i].style.zIndex = -stt;
+                    sliderItems[i].style.filter = 'blur(5px)';
+                    sliderItems[i].style.opacity = stt > 2 ? 0 : 0.6;
+                }
+            }
+
+            loadShow();
+
+            if (nextButton) {
+                nextButton.onclick = function() {
+                    active = active + 1 < sliderItems.length ? active + 1 : active;
+                    loadShow();
+                }
+            }
+
+            if (prevButton) {
+                prevButton.onclick = function() {
+                    active = active - 1 >= 0 ? active - 1 : active;
+                    loadShow();
+                }
+            }
+        }
+    }
+
+    // Inisialisasi setiap slider
+    sliderWrappers.forEach(initializeSlider);
+
+    // Event listener untuk tombol kategori
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (isTransitioning) return; // Mencegah klik ganda saat transisi
+
+            const category = button.dataset.category;
+            const targetSlider = document.getElementById(`slider-${category}`);
+
+            // Hapus kelas 'active' dari semua tombol dan slider
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            
+            isTransitioning = true;
+
+            // Animasi fade out untuk slider yang sedang aktif
+            const activeSlider = document.querySelector('.slider-wrapper.active');
+            if (activeSlider) {
+                activeSlider.classList.add('fade-out');
+                setTimeout(() => {
+                    activeSlider.classList.remove('active', 'fade-out');
+                    activeSlider.classList.add('hidden');
+                    
+                    // Tambahkan kelas 'active' ke tombol dan slider yang dituju
+                    button.classList.add('active');
+                    targetSlider.classList.remove('hidden');
+                    targetSlider.classList.add('active', 'fade-in');
+
+                    setTimeout(() => {
+                        targetSlider.classList.remove('fade-in');
+                        isTransitioning = false; // Transisi selesai
+                    }, 500);
+
+                }, 500);
+            }
+        });
+    });
 });
+    // --- AKHIR KODE SLIDER ---

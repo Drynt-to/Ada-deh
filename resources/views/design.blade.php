@@ -215,35 +215,75 @@
                 </div>
             </section>
             <section id="my-works-section" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
-                <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-20 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works  </h1>
-                <div class="slider mt-16 mr-35 relative flex items-center justify-center">
-                    <div class="item">
-                        <img src="{{ asset('images/Asset 1@4x.png') }}" alt="Student Council 1">
+                <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
+                <!-- Full gambar Cathalina 3D -->
+                <img src="images\Cathalina.png" class="w-2/3 h-auto -rotate-20 absolute z-0 translate-y-[100px] translate-x-[440px]" />
+                <img src="images\eliona.png" class="w-1/2 h-auto rotate-15 absolute z-0 translate-y-[70px] -translate-x-[440px]" />
+                <div id="category-filters" class="flex space-x-4 mb-12">
+                    <button class="category-btn active" data-category="student-council">Student Council</button>
+                    <button class="category-btn" data-category="committee">Committee</button>
+                </div>
+                <div id="slider-student-council" class="slider-wrapper active">
+                    <div class="slider mt-16 mr-35 relative flex items-center justify-center">
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 1@4x.png') }}" alt="Student Council 1">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 2@4x.png') }}" alt="Student Council 2">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 3@4x.png') }}" alt="Student Council 3">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 4@4x.png') }}" alt="Student Council 4">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 5@4x.png') }}" alt="Student Council 5">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 6@4x.png') }}" alt="Student Council 6">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 7@4x.png') }}" alt="Student Council 7">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 8@4x.png') }}" alt="Student Council 8">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 9@4x.png') }}" alt="Student Council 9">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 10@4x.png') }}" alt="Student Council 10">
+                        </div>
+                        <button class="next absolute top-1/2 right-[20px] transform -translate-y-1/2">></button>
+                        <button class="prev absolute top-1/2 left-[20px] transform -translate-y-1/2"><</button>
                     </div>
-                    <div class="item">
-                        <img src="{{ asset('images/Asset 2@4x.png') }}" alt="Student Council 2">
+                </div>
+                <div id="slider-committee" class="slider-wrapper hidden">
+                    <div class="slider mt-16 mr-35 relative flex items-center justify-center">
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 13@4x.png') }}" alt="Committee 1">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 14@4x.png') }}" alt="Committee 2">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/Asset 15@4x.png') }}" alt="Committee 3">
+                        </div>
+                        <button class="next absolute top-1/2 left-360 transform translate-y-1">></button>
+                        <button class="prev absolute top-1/2 right-250 transform translate-y-1"><</button>
                     </div>
-                    <div class="item">
-                        <img src="{{ asset('images/Asset 3@4x.png') }}" alt="Student Council 3">
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('images/Asset 4@4x.png') }}" alt="Student Council 4">
-                    </div>
-                    <button id="next" class="absolute top-1/2 left-300 transform translate-y-1">></button>
-                    <button id="prev" class="absolute top-1/2 right-250 transform translate-y-1"><</button>
                 </div>
             </section>
         </div>
-
     </main>
-    
+    <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">
         <img src="images/camera.svg" class="w-48 h-48 drop-shadow-lg" alt="Animasi Kamera">
     </div>
     <div id="flash-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none hidden"></div>
 
     <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-90 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
-        {{-- Ikon akan diisi oleh JavaScript --}}
     </button>
 
     <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
