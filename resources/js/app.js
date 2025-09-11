@@ -505,5 +505,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Event listener untuk tombol kategori
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (isTransitioning) return; // Mencegah klik ganda saat transisi
+
+            const category = button.dataset.category;
+            const targetSlider = document.getElementById(`slider-${category}`);
+            const worksSection = document.getElementById('my-works-section-design'); // Tambahkan ini
+
+            // Hapus kelas 'active' dari semua tombol dan slider
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            
+            isTransitioning = true;
+
+            // Logika untuk mengubah background
+            if (category === 'committee') {
+                worksSection.classList.remove('bg-[#FF8BB0]', 'bg-pink-grid');
+                worksSection.classList.add('committee-active', 'bg-blue-grid');
+            } else {
+                worksSection.classList.remove('committee-active', 'bg-blue-grid');
+                worksSection.classList.add('bg-[#FF8BB0]', 'bg-pink-grid');
+            }
+
+            // Animasi fade out untuk slider yang sedang aktif
+            const activeSlider = document.querySelector('.slider-wrapper.active');
+            if (activeSlider) {
+                activeSlider.classList.add('fade-out');
+                setTimeout(() => {
+                    activeSlider.classList.remove('active', 'fade-out');
+                    activeSlider.classList.add('hidden');
+                    
+                    // Tambahkan kelas 'active' ke tombol dan slider yang dituju
+                    button.classList.add('active');
+                    targetSlider.classList.remove('hidden');
+                    targetSlider.classList.add('active', 'fade-in');
+
+                    setTimeout(() => {
+                        targetSlider.classList.remove('fade-in');
+                        isTransitioning = false; // Transisi selesai
+                    }, 500);
+
+                }, 500);
+            }
+        });
+    });
 });
-    // --- AKHIR KODE SLIDER ---
