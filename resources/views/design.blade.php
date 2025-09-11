@@ -366,12 +366,12 @@
                     </div>
                     
                     <div class="flex justify-center space-x-8 mb-10 text-lg font-semibold">
-                        <a href="#" id="home-link" class="hover:text-gray-300 transition-colors">Home</a>
+                        <a href="#" id="home-link" class="font-poppins hover:text-gray-300 transition-colors">Home</a>
                     </div>
 
                     <div class="w-full h-px bg-gray-700 mb-8"></div>
 
-                    <p class=" text-gray-400 text-sm font-medium">Copyright ©2025, Designed by Virly</p>
+                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly</p>
                 </div>
         </section>
     </main>
