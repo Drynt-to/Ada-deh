@@ -254,31 +254,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Portfolio Photography Virly -->
-            <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
-                <img src="images/plastic-texture.png" alt=""
-                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
-                <video autoplay loop muted playsinline
-                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
-                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
-                </video>
-
-                <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
-                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m 16.862 4.487 l 1.687 -1.688 a 1.875 1.875 0 1 1 2.652 2.652 L 10.582 16.07 a 4.5 4.5 0 0 1 -1.897 1.13 L 6 18 l 0.8 -2.685 a 4.5 4.5 0 0 1 1.13 -1.897 l 8.932 -8.931 Z m 0 0 L 19.5 7.125" />
-                    </svg>
-                </button>
-
-                <div class="text-white z-10">
-                    <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
-                        <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
-                    </h1>
-                    <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
-                        <p class="font-medium uppercase">BY VIRLY VC</p>
-                        <p class="font-normal">2025</p>
-                    </div>
-                </div>
-            </section>
             <section id="my-works-section-design" class="w-full h-auto bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
                 <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
                 <!-- Full gambar Cathalina 3D -->
@@ -345,8 +320,7 @@
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>
             </section>
-        </div>
-        <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
+            <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto text-center relative z-10">
                     <div class="flex justify-center mb-2">
                         <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
@@ -373,7 +347,34 @@
 
                     <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra</p>
                 </div>
-        </section>
+            </section>
+            <!-- Portfolio Photography Virly -->
+        <div id ="photo-page-wrapper" class="hidden">
+            <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
+                <img src="images/plastic-texture.png" alt=""
+                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
+                <video autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
+                </video>
+
+                <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
+                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m 16.862 4.487 l 1.687 -1.688 a 1.875 1.875 0 1 1 2.652 2.652 L 10.582 16.07 a 4.5 4.5 0 0 1 -1.897 1.13 L 6 18 l 0.8 -2.685 a 4.5 4.5 0 0 1 1.13 -1.897 l 8.932 -8.931 Z m 0 0 L 19.5 7.125" />
+                    </svg>
+                </button>
+
+                <div class="text-white z-10">
+                    <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
+                        <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
+                    </h1>
+                    <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
+                        <p class="font-medium uppercase">BY VIRLY VC</p>
+                        <p class="font-normal">2025</p>
+                    </div>
+                </div>
+            </section>
+        </div>  
     </main>
     <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">

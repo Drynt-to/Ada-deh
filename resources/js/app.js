@@ -506,4 +506,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-    // --- AKHIR KODE SLIDER ---
+   
