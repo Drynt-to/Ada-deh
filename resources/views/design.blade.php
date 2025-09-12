@@ -311,6 +311,21 @@
                         <div class="item">
                             <img src="{{ asset('images/Asset 15@4x.png') }}" alt="Committee 3">
                         </div>
+                        <div class="item">
+                            <img src="{{ asset('images\pce 1@4x-100.jpg') }}" alt="Committee 3">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images\pce 2@4x-100.jpg') }}" alt="Committee 3">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images\pce 3@4x-100.jpg') }}" alt="Committee 3">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images\asp 1@4x-100.jpg') }}" alt="Committee 3">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images\asp 2@4x-100.jpg') }}" alt="Committee 3">
+                        </div>
                         <button class="next absolute top-1/2 left-360 transform translate-y-1">></button>
                         <button class="prev absolute top-1/2 right-250 transform translate-y-1"><</button>
                     </div>
@@ -349,7 +364,7 @@
                 </div>
             </section>
             <!-- Portfolio Photography Virly -->
-        <div id ="photo-page-wrapper" class="hidden">
+        <!-- <div id ="photo-page-wrapper" class="hidden"> -->
             <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
@@ -374,7 +389,86 @@
                     </div>
                 </div>
             </section>
-        </div>  
+            <section id="about-me-photo" class="relative min-h-screen w-screen hidden flex items-center justify-center p-12 sm:p-16 overflow-hidden">
+                <img src="images/plastic-texture.png" alt=""
+                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
+                <video autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
+                </video>
+
+                <div class="relative z-30 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative w-full h-[500px] flex items-center justify-center">
+                        <img src="images/Foto1.png" alt="Foto 1" 
+                            class="absolute rounded-lg shadow-2xl w-full max-w-sm h-auto object-cover 
+                                    transition-transform duration-300 transform -translate-x-40 -translate-y-24 z-10 hover:scale-105">
+                        
+                        <img src="images/Foto2.png" alt="Foto 2" 
+                            class="absolute rounded-lg shadow-2xl w-full max-w-sm h-auto object-cover 
+                                    transition-transform duration-300 transform -translate-x-1 -translate-y-20 z-20 hover:scale-105">
+                        
+                        <img src="images/Foto3.png" alt="Foto 3" 
+                            class="absolute rounded-lg shadow-2xl w-full max-w-sm h-auto object-cover 
+                                    transition-transform duration-300 transform translate-x-20 translate-y-1 z-30 hover:scale-105">
+                        
+                        <img src="images/Foto4.png" alt="Foto 4" 
+                            class="absolute rounded-lg shadow-2xl w-full max-w-sm h-auto object-cover 
+                                    transition-transform duration-300 transform -translate-x-24 translate-y-12 z-40 hover:scale-105">
+                    </div>
+
+                    <div class="ml-28 text-white" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.8);"> 
+                        <h2 class="text-6xl sm:text-7xl tracking-tight mb-6">
+                            <span class="font-montserrat font-semibold italic">HI!</span>
+                        </h2>
+                        <div class="font-montserrat text-lg sm:text-2xl space-y-6 leading-relaxed">
+                            <p>
+                                I’m <span class="underline">Virly Virginia Chandra</span>, a photographer based in Surabaya, Indonesia.
+                            </p>
+                            <p>
+                                In this portfolio, you’ll find a curated selection of
+                                my work ranging from street photography to
+                                editorial portrait works. I’m excited on
+                                collaborating on future projects and bringing our
+                                creative visions to life together. I invite you to
+                                explore and take your time viewing the world
+                                through my lens.
+                            </p>
+                            <p class="italic">
+                                <span class="font-semibold">Editing Platforms : </span>
+                                Adobe Lightroom | Adobe Photoshop |
+                                Adobe Illustrator | Figma 
+                            </p>
+                        </div>
+                    </div>
+                <div class="text-white z-10 -translate-x-36 translate-y-10">
+                    <h1 class="text-4xl sm:text-4xl md:text-4xl tracking-tight">
+                        <span class="font-montserrat font-medium">Contact me: </span>
+                    </h1>
+                    <h1 class="text-4xl sm:text-4xl md:text-4xl tracking-tight">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com&su=Pertanyaan%20dari%20Website&body=Halo%20Virly%20Selamat%20Ulang%20Tahun!!!" target="_blank" rel="noopener noreferrer">
+                            <span class="font-montserrat font-medium">virlyvirginia.vv@gmail.com</span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="text-white z-10 -translate-x-24 translate-y-12">
+                    <h1 class="text-4xl sm:text-4xl md:text-4xl tracking-tight">
+                        <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer">
+                            <span class="font-montserrat font-medium">+62 895-4063-77667</span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="text-white z-10 translate-x-[540px] -translate-y-10">
+                    <h1 class="text-4xl sm:text-4xl md:text-4xl tracking-tight">
+                        <span class="font-montserrat font-medium">Instagram handles: </span>
+                    </h1>
+                    <h1 class="text-4xl sm:text-4xl md:text-4xl tracking-tight">
+                        <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer">
+                            <span class="font-montserrat font-medium">@virlyvc & @by_virrvc</span>
+                        </a>
+                    </h1>
+                </div>
+            </section>
+        <!-- </div>   -->
     </main>
     <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">
