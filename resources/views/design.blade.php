@@ -128,7 +128,6 @@
                     </defs> 
                 </svg>
             </section>
-
             <!-- Bagian About Me Khusus Design (yang photo beda lagi) -->
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
                 <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -256,7 +255,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Bagian My Works Khusus Design (ada slider) -->
             <section id="my-works-section-design" class="w-full h-auto bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
                 <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
@@ -339,7 +337,6 @@
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>
             </section>
-            
             <!-- Bagian Footer Khusus Design (seadanya) -->
             <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
                 <div>
@@ -399,7 +396,8 @@
                     <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra, Coded by Daryanto Tanawi</p>
                 </div>
             </section>
-            <!-- Portfolio Photography Virly -->
+
+        <!-- Portfolio Photography Virly -->
             <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
@@ -446,6 +444,7 @@
                     </div>
                 </div>
             </section>
+            <!-- About Me yang khusus Photography -->
             <section id="about-me-photo" class="relative min-h-screen w-screen hidden flex items-center justify-center p-12 sm:p-16 overflow-hidden">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
@@ -525,7 +524,29 @@
                     </h1>
                 </div>
             </section>
-            <section id="table-of-contents" class="relative min-h-screen w-screen hidden  overflow-hidden">
+            <section id="bridging-toc" class="hidden">
+                <div class="tulisan-slider" style="
+                    --width: 120px;
+                    --height: 50px;
+                    --quantity: 10;
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-weight: bold;
+                ">
+                    <div class="list">
+                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                    </div>
+                </div>
+            </section>
+            <section id="table-of-contents">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
                 <video autoplay loop muted playsinline
@@ -540,10 +561,30 @@
                     <div class="autoBLur">-FOOD</div>
                 </div>
             </section>
-
+            <section id="bridging-gallery" class="hidden">
+                <div class="tulisan-slider" style="
+                    --width: 120px;
+                    --height: 50px;
+                    --quantity: 10;
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-weight: bold;
+                ">
+                    <div class="list">
+                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">Gallery.</div>
+                    </div>
+                </div>
+            </section>
             
-            
-        <!-- </div>   -->
+        
     </main>
     <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">

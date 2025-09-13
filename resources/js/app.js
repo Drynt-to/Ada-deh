@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const designPage = document.querySelector('section');
     const photoPage = document.getElementById('photo-page');
     const bridgephoto = document.getElementById('bridging-photo');
+    const bridgegallery = document.getElementById('bridging-gallery');
+    const bridgetoc = document.getElementById('bridging-toc');
     const aboutMePhoto = document.getElementById('about-me-photo');
     const tableofcontent = document.getElementById('table-of-contents');
     const body = document.body;
@@ -47,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sfxLiquid) sfxLiquid.volume = 0.3;
     };
 
+    
+
     const initializeToDesignPage = () => {
         // Set kondisi sama seperti setelah liquid transition
         photoPage.classList.add('hidden');
@@ -57,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tableofcontent.classList.remove('flex');
         bridgephoto.classList.add('hidden');
         bridgephoto.classList.remove('flex');
+        bridgegallery.classList.add('hidden');
+        bridgegallery.classList.remove('flex');
+        bridgetoc.classList.add('hidden');
+        bridgetoc.classList.remove('flex');
         designPage.classList.remove('hidden');
         designPage.classList.add('flex');
         if (aboutSection) aboutSection.classList.remove('hidden');
@@ -145,6 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
             tableofcontent.classList.add('flex');
             bridgephoto.classList.remove('hidden');
             bridgephoto.classList.add('flex');
+            bridgegallery.classList.remove('hidden');
+            bridgegallery.classList.add('flex');
+            bridgetoc.classList.remove('hidden');
+            bridgetoc.classList.add('flex');
             body.style.backgroundColor = '#000000';
 
             flashOverlay.classList.remove('hidden');
@@ -190,6 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
             tableofcontent.classList.remove('flex');
             bridgephoto.classList.add('hidden');
             bridgephoto.classList.remove('flex');
+            bridgegallery.classList.add('hidden');
+            bridgegallery.classList.remove('flex');
+            bridgetoc.classList.add('hidden');
+            bridgetoc.classList.remove('flex');
             designPage.classList.remove('hidden');
             designPage.classList.add('flex');
             if (aboutSection) aboutSection.classList.remove('hidden');
@@ -591,5 +607,6 @@ document.addEventListener('DOMContentLoaded', () => {
             detectRetina: true,
         },
     });
+    
 });
    
