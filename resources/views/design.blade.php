@@ -414,7 +414,7 @@
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
                 <video autoplay loop muted playsinline
-                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none z-10">
                     <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
                 </video>
 
@@ -561,12 +561,6 @@
                 </div>
             </section>
             <section id="table-of-contents">
-                <img src="images/plastic-texture.png" alt=""
-                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
-                <video autoplay loop muted playsinline
-                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
-                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
-                </video>
                 <div class="grid-3">
                     <div class="autoBLur">TABLE OF CONTENTS</div>
                     <div class="autoBLur">-AUTOMOBILE</div>
