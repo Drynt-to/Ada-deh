@@ -512,5 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
 });
    

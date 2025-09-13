@@ -437,19 +437,3 @@ body > #liquid-transition-overlay {
 }
 
 
-/* Custom Cursor CSS */
-
-/* 1. Kursor Default untuk Seluruh Halaman (Idle) */
-html {
-    cursor: url('/images/cursor-default.png'), auto !important;
-}
-
-/* 2. Kursor untuk Elemen Interaktif (Saat Hover) */
-a:hover,
-button:hover,
-input[type="submit"]:hover,
-.category-btn:hover,
-.slider .next:hover,
-.slider .prev:hover {
-    cursor: url('/images/cursor-pointer.png'), pointer !important;
-}
