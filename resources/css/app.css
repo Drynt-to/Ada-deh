@@ -435,29 +435,87 @@ body > #liquid-transition-overlay {
 .bg-blue-grid {
     background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23686FC6'/><rect height='1' width='40' fill='%23686FC6'/></svg>");
 }
-    .text-gradient-custom {
-        background-image: linear-gradient(to bottom, #FDE047, #F97316, #EC4899); 
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
+.text-gradient-custom {
+    background-image: linear-gradient(to bottom, #FDE047, #F97316, #EC4899); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-    .text-stroke-2 {
-        -webkit-text-stroke-width: 3px;
-        text-stroke-width: 3px;
-    }
+.text-stroke-2 {
+    -webkit-text-stroke-width: 3px;
+    text-stroke-width: 3px;
+}
 
-    .stroke-white {
-        -webkit-text-stroke-color: white !important;
-        text-stroke-color: white !important;
-    }
+.stroke-white {
+    -webkit-text-stroke-color: white !important;
+    text-stroke-color: white !important;
+}
 
-     .hover-lift {
-        display: inline-block; /* Wajib ada agar transform bisa bekerja */
-        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0); /* Animasi yang lebih 'bouncy' */
-        cursor: pointer; /* Mengubah kursor jadi tangan saat hover */
-    }
+.hover-lift {
+    display: inline-block; /* Wajib ada agar transform bisa bekerja */
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0); /* Animasi yang lebih 'bouncy' */
+    cursor: pointer; /* Mengubah kursor jadi tangan saat hover */
+}
 
-    .hover-lift:hover {
-        transform: translateY(-25px); /* Mengangkat huruf sejauh 25px ke atas */
+.hover-lift:hover {
+    transform: translateY(-25px); /* Mengangkat huruf sejauh 25px ke atas */
+}
+
+.tulisan-slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.tulisan-slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.tulisan-slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+
+    background: transparent;
+    border: none;
+    color: white;
+
+
+    font-size: 24px; 
+
+}
+.tulisan-slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
     }
+}
+.tulisan-slider .item:hover{
+    filter: grayscale(0);
+}
+.tulisan-slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}

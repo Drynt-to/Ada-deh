@@ -129,7 +129,6 @@
                 </svg>
             </section>
 
-
             <!-- Bagian About Me Khusus Design (yang photo beda lagi) -->
             <section id="about-me-design" class="bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10">
                 <div class="animate-on-scroll max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -257,6 +256,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Bagian My Works Khusus Design (ada slider) -->
             <section id="my-works-section-design" class="w-full h-auto bg-[#FF8BB0] bg-pink-grid py-20 sm:py-32 px-6 sm:px-8 relative z-10 slider-container flex flex-col items-center">
                 <h1 class="font-drinks-fruit text-5xl md:text-8xl font-brand mb-12 animate-slide-in-up" style="color: #2A8E6B; text-shadow: -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF, 4px 4px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF, 0 4px 8px rgba(0,0,0,0.35);">My Works</h1>
                 <!-- Full gambar Cathalina 3D -->
@@ -338,8 +339,9 @@
                     <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full">
                 </div>
             </section>
+            
+            <!-- Bagian Footer Khusus Design (seadanya) -->
             <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
-                <div id="tsparticles" class="absolute top-0 left-0 w-full h-full z-10"></div>
                 <div>
                     <img src="{{ asset('images/cathalina ngintip.gif') }}" alt="Footer Animation" class="w-150 absolute bottom-0 -left-15" />
                 </div>
@@ -354,8 +356,8 @@
                     <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">V</span>
                     <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">C</span>
                 </div>
-                 <div class="relative mt-[-4.5rem] h-24">
-                    <svg class="absolute top-47 right-2 w-1/4 h-auto" viewBox="0 0 300 40" style="overflow: visible;">
+                 <div class="relative mt-[-4.5rem] h-20">
+                    <svg class="absolute top-42 right-2 w-1/4 h-auto" viewBox="0 0 300 40" style="overflow: visible;">
                         <path class="scribble-path wobbly-scribble" style="animation-delay: 2.2s; filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
                             <g class="pencil-anim">
                             <image href="images/pencil.svg" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
@@ -394,7 +396,7 @@
 
                     <div class="w-full h-px bg-gray-700 mb-3"></div>
 
-                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra, anjay</p>
+                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra, Coded by Daryanto Tanawi</p>
                 </div>
             </section>
             <!-- Portfolio Photography Virly -->
@@ -422,6 +424,28 @@
                     </div>
                 </div>
             </section>
+            <section id="bridging-photo" >
+                <div class="tulisan-slider" style="
+                    --width: 120px;
+                    --height: 50px;
+                    --quantity: 10;
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-weight: bold;
+                ">
+                    <div class="list">
+                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">Virly vc.</div>
+                    </div>
+                </div>
+            </section>
             <section id="about-me-photo" class="relative min-h-screen w-screen hidden flex items-center justify-center p-12 sm:p-16 overflow-hidden">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
@@ -430,8 +454,8 @@
                     <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
                 </video>
 
-                <div class="relative z-30 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div class="relative w-full h-[500px] flex items-center justify-center">
+                <div class="relative z-30 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center top-30">
+                    <div class="relative w-full h-[500px] flex items-center justify-center top-25">
                         <img src="images/Foto1.png" alt="Foto 1" 
                             class="absolute rounded-lg shadow-2xl w-full max-w-sm h-auto object-cover 
                                     transition-transform duration-300 transform -translate-x-40 -translate-y-24 z-10 hover:scale-105">
@@ -501,6 +525,7 @@
                     </h1>
                 </div>
             </section>
+            
         <!-- </div>   -->
     </main>
     <!-- Elemen animasi kamera dan flash -->
@@ -532,7 +557,7 @@
     <audio id="sfx-liquid">
         <source src="{{ asset('sfx/liquid_swoosh.mp3') }}" type="audio/mpeg">
     </audio>
-    
+
     <div id="liquid-transition-overlay">
         <div class="liquid-blob"></div>
         <div class="liquid-blob"></div>
