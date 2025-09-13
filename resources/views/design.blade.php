@@ -41,6 +41,16 @@
     </svg>
 
     <main>
+        <div id="global-bg" class="fixed inset-0 w-full h-full -z-10 pointer-events-none hidden">
+            <!-- Video -->
+            <video id="bg-video" autoplay loop muted playsinline
+                class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
+            </video>
+            <!-- Texture -->
+            <img src="images/plastic-texture.png" alt="Texture overlay"
+                class="absolute inset-0 w-full h-full object-cover opacity-60">
+        </div>
         <div id="design-page-wrapper">
             <section class="min-h-screen flex items-center justify-center p-4 sm:p-8 overflow-hidden bg-[#686FC6]">
                 <!-- Tombol Kamera -->
@@ -415,7 +425,7 @@
                         </svg>
                     </button>
 
-                    <div class="text-white z-10">
+                    <div class="text-white z-9999">
                         <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
                             <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
                         </h1>
@@ -650,6 +660,79 @@
                     <img id="gallery-lightbox-img" src="" class="max-w-full max-h-full rounded-xl shadow-2xl">
                 </div>
 
+            </section>
+            <section id="bridging-footer" class="hidden">
+                <div class="tulisan-slider" style="
+                    --width: 120px;
+                    --height: 50px;
+                    --quantity: 10;
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-weight: bold;
+                ">
+                    <div class="list">
+                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">Interested?</div>
+                    </div>
+                </div>
+            </section>
+            <!-- Bagian Footer Khusus Photo (seadanya) -->
+            <section id="footer-photo" class="bg-black py-20 sm:py-20 px-6 sm:px-8 relative z-10">
+                <div>
+                    <img src="{{ asset('images/Foto Kamera.png') }}" alt="Footer Animation" class="w-150 absolute bottom-0 left-0" />
+                </div>
+
+                <div class="font-montserrat italic font-bold text-8xl absolute bottom-20 right-25 flex items-center z-50">
+                    <span class="hover-lift text-white">V</span>
+                    <span class="hover-lift text-white">i</span>
+                    <span class="hover-lift text-white">r</span>
+                    <span class="hover-lift text-white">l</span>
+                    <span class="hover-lift text-white">y</span>
+                    <span class="w-6"></span> 
+                    <span class="hover-lift text-white">V</span>
+                    <span class="hover-lift text-white">C</span>
+                </div>
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+
+                    <div class="flex justify-center mb-2">
+
+                        <!-- {{-- Ikon Instagram --}} -->
+                        <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
+                            <img src="{{ asset('images/instagram.png') }}" alt="Instagram" class="w-full h-auto">
+                        </a> 
+
+                        <!-- {{-- Ikon Line --}} -->
+                        <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Line">
+                            <img src="{{ asset('images/line.png') }}" alt="Line" class="w-full h-auto">
+                        </a>
+
+                        <!-- {{-- Ikon WhatsApp --}} -->
+                        <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="WhatsApp">
+                            <img src="{{ asset('images/whatsapp.png') }}" alt="WhatsApp" class="w-full h-auto">
+                        </a>
+
+                        <!-- {{-- Ikon Gmail --}} -->
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Gmail">
+                            <img src="{{ asset('images/gmail.png') }}" alt="Gmail" class="w-full h-auto">
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="flex justify-center space-x-8 mb-2 text-lg font-semibold">
+                        <a href="#" id="home-link" class="font-poppins text-white hover:text-gray-700 transition-colors">Home</a>
+                    </div>
+
+                    <div class="w-full h-px bg-gray-700 mb-3"></div>
+
+                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Photographed by Virly Virginia Chandra, Coded by Daryanto Tanawi</p>
+                </div>
             </section>
 
     </main>

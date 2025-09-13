@@ -1,44 +1,3 @@
-const swipers = document.querySelectorAll('.gallery-cards');
-swipers.forEach((el, i) => {
-  new Swiper(el, {
-    effect: 'cards',
-    grabCursor: true,
-    loop: true,
-  });
-});
-
-const buttons = document.querySelectorAll('.gallery-btn');
-const wrappers = document.querySelectorAll('.gallery-wrapper');
-
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // reset tombol
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    // tampilkan wrapper sesuai kategori
-    wrappers.forEach(w => w.classList.add('hidden'));
-    document.getElementById('swiper-' + btn.dataset.category).classList.remove('hidden');
-  });
-});
-
-const slides = document.querySelectorAll('.swiper-slide img');
-const lightbox = document.getElementById('gallery-lightbox');
-const lightboxImg = document.getElementById('gallery-lightbox-img');
-const closeLightbox = document.getElementById('close-gallery-lightbox');
-
-slides.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.classList.remove('hidden');
-  });
-});
-
-closeLightbox.addEventListener('click', () => {
-  lightbox.classList.add('hidden');
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     
@@ -52,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const bridgephoto = document.getElementById('bridging-photo');
     const bridgegallery = document.getElementById('bridging-gallery');
     const bridgetoc = document.getElementById('bridging-toc');
+    const bridgefooter = document.getElementById('bridging-footer');
+    const footerphoto = document.getElementById('footer-photo');
     const gallerySection = document.getElementById('gallery-section');
     const aboutMePhoto = document.getElementById('about-me-photo');
     const tableofcontent = document.getElementById('table-of-contents');
@@ -108,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         bridgegallery.classList.remove('flex');
         bridgetoc.classList.add('hidden');
         bridgetoc.classList.remove('flex');
+        bridgefooter.classList.add('hidden');
+        bridgefooter.classList.remove('flex');
+        footerphoto.classList.add('hidden');
+        footerphoto.classList.remove('flex');
         gallerySection.classList.add('hidden');
         gallerySection.classList.remove('flex');
         designPage.classList.remove('hidden');
@@ -202,6 +167,10 @@ document.addEventListener('DOMContentLoaded', () => {
             bridgegallery.classList.add('flex');
             bridgetoc.classList.remove('hidden');
             bridgetoc.classList.add('flex');
+            bridgefooter.classList.remove('hidden');
+            bridgefooter.classList.add('flex');
+            footerphoto.classList.remove('hidden');
+            footerphoto.classList.add('flex');
             gallerySection.classList.remove('hidden');
             gallerySection.classList.add('flex');
             body.style.backgroundColor = '#000000';
@@ -253,6 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
             bridgegallery.classList.remove('flex');
             bridgetoc.classList.add('hidden');
             bridgetoc.classList.remove('flex');
+            bridgefooter.classList.add('hidden');
+            bridgefooter.classList.remove('flex');
+            footerphoto.classList.add('hidden');
+            footerphoto.classList.remove('flex');
             gallerySection.classList.add('hidden');
             gallerySection.classList.remove('flex');
             designPage.classList.remove('hidden');
@@ -657,7 +630,32 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-
+    
 
 });
+
+const swipers = document.querySelectorAll('.gallery-cards');
+swipers.forEach((el, i) => {
+  new Swiper(el, {
+    effect: 'cards',
+    grabCursor: true,
+    loop: true,
+  });
+});
+
+const buttons = document.querySelectorAll('.gallery-btn');
+const wrappers = document.querySelectorAll('.gallery-wrapper');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // reset tombol
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // tampilkan wrapper sesuai kategori
+    wrappers.forEach(w => w.classList.add('hidden'));
+    document.getElementById('swiper-' + btn.dataset.category).classList.remove('hidden');
+  });
+});
+
    
