@@ -525,12 +525,23 @@
                     </h1>
                 </div>
             </section>
-            <section class="grid grid-3 au">
-                <div class="autoBLur">AUTOMOBILE EDITORIAL</div>
-                <div class="autoBLur">PORTRAIT EDITORIAL</div>
-                <div class="autoBLur">STREET PHOTOGRAPHY</div>
-                <div class="autoBLur">FOOD PHOTOGRAPHY</div>
+            <section id="table-of-contents" class="relative min-h-screen w-screen hidden  overflow-hidden">
+                <img src="images/plastic-texture.png" alt=""
+                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
+                <video autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
+                </video>
+                <div class="grid-3">
+                    <div class="autoBLur">TABLE OF CONTENTS</div>
+                    <div class="autoBLur">-AUTOMOBILE</div>
+                    <div class="autoBLur">-PORTRAIT</div>
+                    <div class="autoBLur">-STREET</div>
+                    <div class="autoBLur">-FOOD</div>
+                </div>
             </section>
+
+            
             
         <!-- </div>   -->
     </main>

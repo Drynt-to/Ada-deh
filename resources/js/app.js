@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const photoPage = document.getElementById('photo-page');
     const bridgephoto = document.getElementById('bridging-photo');
     const aboutMePhoto = document.getElementById('about-me-photo');
+    const tableofcontent = document.getElementById('table-of-contents');
     const body = document.body;
     const musicDesign = document.getElementById('music-design');
     const musicPhoto = document.getElementById('music-photo');
@@ -52,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         photoPage.classList.remove('flex');
         aboutMePhoto.classList.add('hidden');
         aboutMePhoto.classList.remove('flex');
+        tableofcontent.classList.add('hidden');
+        tableofcontent.classList.remove('flex');
         bridgephoto.classList.add('hidden');
         bridgephoto.classList.remove('flex');
         designPage.classList.remove('hidden');
@@ -138,6 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
             photoPage.classList.add('flex');
             aboutMePhoto.classList.remove('hidden');
             aboutMePhoto.classList.add('flex');
+            tableofcontent.classList.remove('hidden');
+            tableofcontent.classList.add('flex');
             bridgephoto.classList.remove('hidden');
             bridgephoto.classList.add('flex');
             body.style.backgroundColor = '#000000';
@@ -181,6 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
             photoPage.classList.remove('flex');
             aboutMePhoto.classList.add('hidden');
             aboutMePhoto.classList.remove('flex');
+            tableofcontent.classList.add('hidden');
+            tableofcontent.classList.remove('flex');
             bridgephoto.classList.add('hidden');
             bridgephoto.classList.remove('flex');
             designPage.classList.remove('hidden');
