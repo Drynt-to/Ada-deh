@@ -1,3 +1,5 @@
+import { tsParticles } from "@tsparticles/slim";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Elemen & Variabel ---
@@ -512,6 +514,70 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
+    // Muat partikel ke dalam div #tsparticles dengan konfigurasi di bawah
+    tsParticles.load({
+        id: "tsparticles",
+        options: {
+            background: {
+                color: {
+                    value: "transparent", // Background transparan agar warna ungu dari CSS terlihat
+                },
+            },
+            fpsLimit: 60, // Batasi FPS agar tidak terlalu berat
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "repulse", // Partikel akan menjauh saat didekati mouse
+                    },
+                },
+                modes: {
+                    repulse: {
+                        distance: 100, // Jarak partikel menjauh dari mouse
+                        duration: 0.4,
+                    },
+                },
+            },
+            particles: {
+                color: {
+                    value: "#ffffff", // Warna partikel (putih)
+                },
+                links: {
+                    color: "#ffffff", // Warna garis antar partikel
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.2,
+                    width: 1,
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outModes: {
+                        default: "bounce",
+                    },
+                    random: false,
+                    speed: 1, // Kecepatan gerak partikel
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                    },
+                    value: 50, // Jumlah partikel
+                },
+                opacity: {
+                    value: 0.3, // Transparansi partikel
+                },
+                shape: {
+                    type: "circle", // Bentuk partikel
+                },
+                size: {
+                    value: { min: 1, max: 4 }, // Ukuran partikel (acak antara 1px dan 4px)
+                },
+            },
+            detectRetina: true,
+        },
+    });
 });
    

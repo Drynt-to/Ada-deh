@@ -339,23 +339,54 @@
                 </div>
             </section>
             <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
+                <div id="tsparticles" class="absolute top-0 left-0 w-full h-full z-10"></div>
+                <div>
+                    <img src="{{ asset('images/cathalina ngintip.gif') }}" alt="Footer Animation" class="w-150 absolute bottom-0 -left-15" />
+                </div>
+
+                <div class="font-drinks-fruit text-8xl absolute bottom-20 right-15 flex items-center z-50">
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">V</span>
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">i</span>
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">r</span>
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">l</span>
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">y</span>
+                    <span class="w-6"></span> 
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">V</span>
+                    <span class="hover-lift text-gradient-custom text-stroke-2 stroke-white">C</span>
+                </div>
+                 <div class="relative mt-[-4.5rem] h-24">
+                    <svg class="absolute top-47 right-2 w-1/4 h-auto" viewBox="0 0 300 40" style="overflow: visible;">
+                        <path class="scribble-path wobbly-scribble" style="animation-delay: 2.2s; filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2)) drop-shadow(0px 1px 0px #FFAEC7);" d="M10 25 C 80 10, 100 40, 150 25 S 220 10, 280 25" stroke="#FFD23F" stroke-width="7" fill="none" stroke-linecap="round"/>
+                            <g class="pencil-anim">
+                            <image href="images/pencil.svg" x="-15" y="-60" width="60" height="60" style="transform: rotate(335deg); filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));" />
+                        </g>
+                    </svg>
+                </div>
                 <div class="max-w-4xl mx-auto text-center relative z-10">
+
                     <div class="flex justify-center mb-2">
-                        <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/>
-                            </svg>
+
+                        <!-- {{-- Ikon Instagram --}} -->
+                        <a href="https://www.instagram.com/virlyvc/" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Instagram">
+                            <img src="{{ asset('images/instagram.png') }}" alt="Instagram" class="w-full h-auto">
                         </a> 
-                        <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Line">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M21.933 5.346c-1.334-.8-3.089-1.12-5.111-1.12-1.322 0-2.5.213-3.622.64-1.011.373-1.889.898-2.689 1.582-.8.684-1.411 1.498-1.844 2.445-.433.947-.644 1.991-.644 3.125s.211 2.178.644 3.125c.433.947 1.044 1.76 1.844 2.445s1.678 1.209 2.689 1.582c1.122.427 2.3.64 3.622.64 2.022 0 3.778-.32 5.111-1.12s2.344-1.889 3-3.289l-2.022-1.12c-.522.924-1.2 1.627-2.033 2.107s-1.756.72-2.778.72c-.856 0-1.656-.16-2.4-.48-.744-.32-1.389-.769-1.933-1.343-.544-.573-.978-1.253-1.3-2.044-.322-.791-.489-1.662-.489-2.613s.167-1.822.5-2.613c.333-.791.756-1.472 1.3-2.044s1.189-1.022 1.933-1.342c.744-.32 1.544-.48 2.4-.48.989 0 1.9.24 2.733.72s1.511 1.182 2.033 2.107l2.022-1.12c-.633-1.4-1.644-2.489-3.022-3.289zM8.333 10.889V9h2.222v5h-2.222v-3.111zm-4.444 0h2.222V14H3.889v-3.111zm11.111 0h2.222V14h-2.222v-3.111z"/></svg>
+
+                        <!-- {{-- Ikon Line --}} -->
+                        <a href="https://line.me/ti/p/~virrvc" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Line">
+                            <img src="{{ asset('images/line.png') }}" alt="Line" class="w-full h-auto">
                         </a>
-                        <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="WhatsApp">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.062l-1.07 3.922 4.02-1.056zm5.012-5.217c-.208-.106-1.257-.62-1.451-.691-.195-.07-.335-.105-.476.105s-.549.691-.673.832c-.124.14-.248.158-.455.052-.207-.105-1.026-.381-1.951-1.206-.719-.643-1.207-1.44-1.349-1.688-.142-.249-.015-.385.09-5.111.101-.125.207-.207.312-.312.105-.106.141-.175.208-.282.067-.106.033-.195 0-.302s-.476-1.133-.652-1.554c-.174-.421-.35-.366-.475-.371s-.248-.008-.372-.008c-.124 0-.323.044-.498.221s-.652.62-.652 1.511c0 .891.667 1.751.752 1.867.085.116 1.313 2.016 3.176 2.83.43.195.766.313 1.036.401.446.146.821.125 1.125.076.363-.057 1.257-.514 1.432-.999.176-.485.176-.9.124-1.001s-.158-.158-.323-.266z"/></svg>
+
+                        <!-- {{-- Ikon WhatsApp --}} -->
+                        <a href="https://wa.me/62895406377667" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="WhatsApp">
+                            <img src="{{ asset('images/whatsapp.png') }}" alt="WhatsApp" class="w-full h-auto">
                         </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Gmail">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+
+                        <!-- {{-- Ikon Gmail --}} -->
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=virlyvirginia.vv@gmail.com" target="_blank" rel="noopener noreferrer" class="mr-2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors duration-300 transform hover:scale-110" aria-label="Gmail">
+                            <img src="{{ asset('images/gmail.png') }}" alt="Gmail" class="w-full h-auto">
                         </a>
                     </div>
+                    
                     
                     <div class="flex justify-center space-x-8 mb-2 text-lg font-semibold">
                         <a href="#" id="home-link" class="font-poppins hover:text-gray-300 transition-colors">Home</a>
@@ -363,11 +394,10 @@
 
                     <div class="w-full h-px bg-gray-700 mb-3"></div>
 
-                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra</p>
+                    <p class="font-poppins text-white text-sm font-medium">Copyright ©2025, Designed by Virly Virginia Chandra, anjay</p>
                 </div>
             </section>
             <!-- Portfolio Photography Virly -->
-        <!-- <div id ="photo-page-wrapper" class="hidden"> -->
             <section id="photo-page" class="relative min-h-screen w-screen hidden items-end justify-start p-12 sm:p-16 overflow-hidden">
                 <img src="images/plastic-texture.png" alt=""
                     class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">

@@ -435,5 +435,29 @@ body > #liquid-transition-overlay {
 .bg-blue-grid {
     background-image: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='40' fill='%23686FC6'/><rect height='1' width='40' fill='%23686FC6'/></svg>");
 }
+    .text-gradient-custom {
+        background-image: linear-gradient(to bottom, #FDE047, #F97316, #EC4899); 
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
+    .text-stroke-2 {
+        -webkit-text-stroke-width: 3px;
+        text-stroke-width: 3px;
+    }
 
+    .stroke-white {
+        -webkit-text-stroke-color: white !important;
+        text-stroke-color: white !important;
+    }
+
+     .hover-lift {
+        display: inline-block; /* Wajib ada agar transform bisa bekerja */
+        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0); /* Animasi yang lebih 'bouncy' */
+        cursor: pointer; /* Mengubah kursor jadi tangan saat hover */
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-25px); /* Mengangkat huruf sejauh 25px ke atas */
+    }
