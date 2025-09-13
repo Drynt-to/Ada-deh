@@ -408,19 +408,21 @@
                     <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
                 </video>
 
-                <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
-                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m 16.862 4.487 l 1.687 -1.688 a 1.875 1.875 0 1 1 2.652 2.652 L 10.582 16.07 a 4.5 4.5 0 0 1 -1.897 1.13 L 6 18 l 0.8 -2.685 a 4.5 4.5 0 0 1 1.13 -1.897 l 8.932 -8.931 Z m 0 0 L 19.5 7.125" />
-                    </svg>
-                </button>
+                <div>
+                    <button id="back-trigger" class="fixed top-6 left-4 z-30 text-white hover:text-black transition-colors duration-300">
+                        <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m 16.862 4.487 l 1.687 -1.688 a 1.875 1.875 0 1 1 2.652 2.652 L 10.582 16.07 a 4.5 4.5 0 0 1 -1.897 1.13 L 6 18 l 0.8 -2.685 a 4.5 4.5 0 0 1 1.13 -1.897 l 8.932 -8.931 Z m 0 0 L 19.5 7.125" />
+                        </svg>
+                    </button>
 
-                <div class="text-white z-10">
-                    <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
-                        <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
-                    </h1>
-                    <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
-                        <p class="font-medium uppercase">BY VIRLY VC</p>
-                        <p class="font-normal">2025</p>
+                    <div class="text-white z-10">
+                        <h1 class="text-7xl sm:text-8xl md:text-8xl tracking-tight">
+                            <span class="font-plus-jakarta-sans font-extralight italic">photography </span><span class="font-montserrat font-medium">portfolio.</span>
+                        </h1>
+                        <div class="flex justify-between items-center mt-4 text-base sm:text-lg tracking-widest font-montserrat">
+                            <p class="font-medium uppercase">BY VIRLY VC</p>
+                            <p class="font-normal">2025</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -610,7 +612,7 @@
                     </div>
                 </div>
 
-                <div id="swiper-portrait" class="gallery-wrapper hidden">
+                <div id="swiper-portrait" class="gallery-wrapper hidden z-50">
                     <div class="swiper gallery-cards">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="images/portrait1.png" alt=""></div>
@@ -622,7 +624,7 @@
                     </div>
                 </div>
 
-                <div id="swiper-street" class="gallery-wrapper hidden">
+                <div id="swiper-street" class="gallery-wrapper hidden z-50">
                     <div class="swiper gallery-cards">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="images/street1.png" alt=""></div>
