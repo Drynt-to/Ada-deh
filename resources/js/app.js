@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         photoPage.classList.remove('flex');
         aboutMePhoto.classList.add('hidden');
         aboutMePhoto.classList.remove('flex');
-        bridgephoto.classList.remove('hidden');
-        bridgephoto.classList.add('flex');
+        bridgephoto.classList.add('hidden');
+        bridgephoto.classList.remove('flex');
         designPage.classList.remove('hidden');
         designPage.classList.add('flex');
         if (aboutSection) aboutSection.classList.remove('hidden');

@@ -488,6 +488,7 @@ body > #liquid-transition-overlay {
     transition: filter 0.5s;
     animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
 
+
     background: transparent;
     border: none;
     color: white;

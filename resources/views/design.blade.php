@@ -424,7 +424,7 @@
                     </div>
                 </div>
             </section>
-            <section id="bridging-photo" >
+            <section id="bridging-photo" class="hidden">
                 <div class="tulisan-slider" style="
                     --width: 120px;
                     --height: 50px;
