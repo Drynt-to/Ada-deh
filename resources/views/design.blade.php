@@ -10,6 +10,8 @@
      @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@1,200&family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -533,16 +535,16 @@
                     font-weight: bold;
                 ">
                     <div class="list">
-                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
-                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">Table Of Contents.</div>
+                        <div class="item" style="--position: 1; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 2; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 3; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 4; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 5; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 6; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 7; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 8; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 9; display: flex; justify-content: center; align-items: center;">TOC.</div>
+                        <div class="item" style="--position: 10; display: flex; justify-content: center; align-items: center;">TOC.</div>
                     </div>
                 </div>
             </section>
@@ -583,8 +585,71 @@
                     </div>
                 </div>
             </section>
-            
-        
+            <section id="gallery-section" class="relative min-h-screen w-full flex flex-col items-center justify-center hidden">
+                <img src="images/plastic-texture.png" alt=""
+                    class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-20">
+                <video autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-10">
+                    <source src="{{ asset('videos/GR5.mp4') }}" type="video/mp4">
+                </video>
+
+                <div id="gallery-filters" class="flex space-x-4 mb-8 z-50">
+                    <button class="gallery-btn active" data-category="automobile">Automobile</button>
+                    <button class="gallery-btn" data-category="portrait">Portrait</button>
+                    <button class="gallery-btn" data-category="street">Street</button>
+                    <button class="gallery-btn" data-category="food">Food</button>
+                </div>
+
+                <div id="swiper-automobile" class="gallery-wrapper active z-50">
+                    <div class="swiper gallery-cards">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/mobil1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/mobil2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/mobil3.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="swiper-portrait" class="gallery-wrapper hidden">
+                    <div class="swiper gallery-cards">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/portrait1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/portrait2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/portrait3.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/portrait4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/portrait5.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="swiper-street" class="gallery-wrapper hidden">
+                    <div class="swiper gallery-cards">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/street1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/street2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/street3.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/street4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/street5.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/street6.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="swiper-food" class="gallery-wrapper hidden">
+                    <div class="swiper gallery-cards">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/food1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="images/food2.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery-lightbox" class="fixed inset-0 bg-black/90 flex items-center justify-center z-50 hidden">
+                    <button id="close-gallery-lightbox" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
+                    <img id="gallery-lightbox-img" src="" class="max-w-full max-h-full rounded-xl shadow-2xl">
+                </div>
+
+            </section>
+
     </main>
     <!-- Elemen animasi kamera dan flash -->
     <div id="animated-camera-container" class="fixed inset-0 z-40 flex items-center justify-center pointer-events-none hidden">
@@ -595,6 +660,7 @@
     <button id="music-toggle-btn" class="fixed bottom-6 right-6 z-90 text-white bg-black/20 p-2 rounded-full hover:bg-black/40 transition-all duration-300">
     </button>
 
+    <!-- Transisi Design ke Photography -->
     <div id="scribble-transition-overlay" class="fixed inset-0 w-screen h-screen z-40 pointer-events-none hidden">
         <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
             <!-- {{-- Liquid-ish(?) tebal yang akan dianimasikan untuk menutupi layar --}} -->
