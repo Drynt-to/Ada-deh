@@ -525,6 +525,12 @@
                     </h1>
                 </div>
             </section>
+            <section class="grid grid-3 au">
+                <div class="autoBLur">AUTOMOBILE EDITORIAL</div>
+                <div class="autoBLur">PORTRAIT EDITORIAL</div>
+                <div class="autoBLur">STREET PHOTOGRAPHY</div>
+                <div class="autoBLur">FOOD PHOTOGRAPHY</div>
+            </section>
             
         <!-- </div>   -->
     </main>

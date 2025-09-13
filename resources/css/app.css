@@ -520,3 +520,142 @@ body > #liquid-transition-overlay {
         left: 100%;
     }
 }
+body{
+    margin: 0;
+    font-size: 14px;
+    color: #CBCBCB;
+    font-family: "Montserrat", sans-serif;
+} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+main{
+    width: min(1400px, 100vw);
+    margin: auto;
+    padding: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(var(--row), 100px);
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.grid-3{
+    --row: 6;
+    font-size: 10em;
+}
+.grid-3 div{
+    grid-column: 2/ 6;
+    text-wrap: nowrap;
+}
+.grid-3 div:nth-child(even){
+    text-align: right;
+}
+.grid-3 div:nth-child(5){
+    grid-column: 1/ 6;
+}
+.grid-3 div:nth-child(4){
+    grid-column: 1/ 7;
+}
+
+@media screen and (max-width: 1023px){
+    header img{
+        height: 2em;
+    }
+    .banner .content h1{
+        font-size: 12em;
+    }
+    .banner .content .right{
+        transform: none;
+    }
+    .grid-2 div:nth-child(1){
+        grid-row: 2;
+    }
+    .grid-2 div:nth-child(3){
+        grid-row: 6;
+    }
+    .grid-2 div:nth-child(4){
+        grid-row: 5;
+    }
+    .grid-3{
+        font-size: 5em;
+        line-height: 1em;
+    }
+}
+@media screen and (max-width: 1023px){
+    header img{
+        height: unset;
+        width: 100%;
+    }
+    .banner .content h1{
+        font-size: 7em;
+    }
+    .banner .content{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner{
+        overflow: hidden;
+    }
+    .grid-1 h2:nth-child(3){
+        font-size: 3em;
+    }
+    .grid{
+        display: block;
+    }
+    .grid-3{
+        font-size: 4em;
+        display: block;
+        margin-bottom: 100px;
+    }
+}
+
+.autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+}
+@keyframes autoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.autoBLur{
+    animation: autoBLurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBLurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    45%, 55%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(40px);
+    }
+}
