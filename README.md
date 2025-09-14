@@ -70,16 +70,5 @@ Please **fork** the repository and create a **pull request**.
 
 ---
 
-## Authors
 
-* [@your-github-username](https://github.com/your-github-username)
-
----
-
-## Acknowledgements
-
-* [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
-* [shields.io](https://shields.io)
-
-```
 
