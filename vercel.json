@@ -1,9 +1,8 @@
 {
-    "version": 2,
     "builds": [
         {
             "src": "public/index.php",
-            "use": "vercel-php@2.0.1"
+            "use": "@vercel-community/php@latest"
         }
     ],
     "rewrites": [
