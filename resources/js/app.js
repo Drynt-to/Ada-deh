@@ -175,6 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gallerySection.classList.add('flex');
             body.style.backgroundColor = '#000000';
 
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
             flashOverlay.classList.remove('hidden');
             flashOverlay.style.opacity = '1';
             flashOverlay.classList.add('animate-flash');
@@ -236,6 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (worksSection) worksSection.classList.remove('hidden');
             if (footerSection) footerSection.classList.remove('hidden');
 
+             window.scrollTo({ top: 0, behavior: 'auto' });
+             
             liquidOverlay.classList.remove('is-active');
 
             setTimeout(() => {
