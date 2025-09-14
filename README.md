@@ -14,7 +14,8 @@ This is a personal project I made as a surprise for someone's birthday, using he
 ---
 
 ## Demo
-_Insert gif or link to demo here._
+![Super quick demo  gif](https://github.com/user-attachments/assets/a4b4d257-98a2-4edf-88cc-d68d7340ddbe)
+https://virlyportfolio.vercel.app/
 
 ---
 
