@@ -352,7 +352,7 @@
             <!-- Bagian Footer Khusus Design (seadanya) -->
             <section id="footer-design" class="bg-[#686FC6] py-20 sm:py-20 px-6 sm:px-8 relative z-10">
                 <div>
-                    <img src="{{ asset('images/cathalina ngintip.gif') }}" alt="Footer Animation" class="w-150 absolute bottom-0 -left-15" />
+                    <img src="{{ asset('images/cathalina ngintip.gif') }}" alt="Footer Animation" class="w-135 absolute bottom-0 -left-5" />
                 </div>
 
                 <div class="font-drinks-fruit text-8xl absolute bottom-20 right-15 flex items-center z-50">
